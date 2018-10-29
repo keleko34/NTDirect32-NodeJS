@@ -13,7 +13,11 @@ var askPlayback = NTDirect32.askPlayback,
     strategies = NTDirect32.strategies,
     targetOrders = NTDirect32.targetOrders,
     subscribeMarketData = NTDirect32.subscribeMarketData,
-    unsubscribeMarketData = NTDirect32.unsubscribeMarketData;
+    unsubscribeMarketData = NTDirect32.unsubscribeMarketData,
+    placeBuyOrder = NTDirect32.placeBuyOrder,
+    placeSellOrder = NTDirect32.placeSellOrder,
+    reverseBuyPosition = NTDirect32.reverseBuyPosition,
+    reverseSellPosition = NTDirect32.reverseSellPosition;
 
 NTDirect32.askPlayback = function()
 {
@@ -122,6 +126,94 @@ NTDirect32.unsubscribeMarketData = function(instrument)
     return 1;
   }
   return unsubscribeMarketData.call(this, instrument);
+}
+
+NTDirect32.placeBuyOrder = function()
+{
+  var args = Array.prototype.slice.call(arguments);
+  
+  args.unshift("PLACE");
+  args.splice(3,0,"BUY");
+  
+  if(args[5] && ["MARKET", "LIMIT", "STOP", "STOPLIMIT"].indexOf(args[5]) === -1)
+  {
+    console.error(new Error("order type must be one of MARKET, LIMIT, STOP, STOPLIMIT:PLACE::Command"));
+    return 0;
+  }
+  
+  if(args[6] && ["DAY", "GTC"].indexOf(args[6]) === -1)
+  {
+    console.error(new Error("TIF type must be one of DAY, GTC:PLACE::Command"));
+    return 0;
+  }
+  
+  return placeBuyOrder.apply(this, args);
+}
+
+NTDirect32.placeSellOrder = function()
+{
+  var args = Array.prototype.slice.call(arguments);
+  
+  args.unshift("PLACE");
+  args.splice(3,0,"SELL");
+  
+  if(args[5] && ["MARKET", "LIMIT", "STOP", "STOPLIMIT"].indexOf(args[5]) === -1)
+  {
+    console.error(new Error("order type must be one of MARKET, LIMIT, STOP, STOPLIMIT:PLACE::Command"));
+    return 0;
+  }
+  
+  if(args[6] && ["DAY", "GTC"].indexOf(args[6]) === -1)
+  {
+    console.error(new Error("TIF type must be one of DAY, GTC:PLACE::Command"));
+    return 0;
+  }
+  
+  return placeSellOrder.apply(this, args);
+}
+
+NTDirect32.reverseBuyPosition = function()
+{
+  var args = Array.prototype.slice.call(arguments);
+  
+  args.unshift("REVERSEPOSITION");
+  args.splice(3,0,"BUY");
+  
+  if(args[5] && ["MARKET", "LIMIT", "STOP", "STOPLIMIT"].indexOf(args[5]) === -1)
+  {
+    console.error(new Error("order type must be one of MARKET, LIMIT, STOP, STOPLIMIT:REVERSEPOSITION::Command"));
+    return 0;
+  }
+  
+  if(args[6] && ["DAY", "GTC"].indexOf(args[6]) === -1)
+  {
+    console.error(new Error("TIF type must be one of DAY, GTC:REVERSEPOSITION::Command"));
+    return 0;
+  }
+  
+  return reverseBuyPosition.apply(this, args);
+}
+
+NTDirect32.reverseSellPosition = function()
+{
+  var args = Array.prototype.slice.call(arguments);
+  
+  args.unshift("REVERSEPOSITION");
+  args.splice(3,0,"SELL");
+  
+  if(args[5] && ["MARKET", "LIMIT", "STOP", "STOPLIMIT"].indexOf(args[5]) === -1)
+  {
+    console.error(new Error("order type must be one of MARKET, LIMIT, STOP, STOPLIMIT:REVERSEPOSITION::Command"));
+    return 0;
+  }
+  
+  if(args[6] && ["DAY", "GTC"].indexOf(args[6]) === -1)
+  {
+    console.error(new Error("TIF type must be one of DAY, GTC:REVERSEPOSITION::Command"));
+    return 0;
+  }
+  
+  return reverseSellPosition.apply(this, args);
 }
 
 process.on('exit', NTDirect32.tearDown);

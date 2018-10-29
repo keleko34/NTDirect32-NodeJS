@@ -320,94 +320,286 @@ Value api::CashValueWrapper(const CallbackInfo& info)
   return Number::New(env, returnValue);
 }
 
-/* Does not work, do not know how to overload or call properly */
-Value api::CommmandWrapper(const CallbackInfo& info)
+Value api::CommmandCANCELLALLORDERSWrapper(const CallbackInfo& info)
 {
   Napi::Env env = info.Env();
   
-  char* command = "";
-  char* account = "";
-  char* instrument = "";
-  char* action = "";
-  int quantity = 0;
-  char* ordertype = "";
-  double limitprice = 0;
-  double stopprice = 0;
-  char* timeinforce = "";
-  char* oco = "";
-  char* orderid = "";
-  char* strategy = "";
-  char* strategyid = "";
-  
+  char* command = NULL;
+  char* account = NULL;
+  char* instrument = NULL;
+  char* action = NULL;
+  int quantity = NULL;
+  char* ordertype = NULL;
+  double limitprice = NULL;
+  double stopprice = NULL;
+  char* timeinforce = NULL;
+  char* oco = NULL;
+  char* orderid = NULL;
+  char* strategy = NULL;
+  char* strategyid = NULL;
   
   if(info[0].IsString() == false) {
-    TypeError::New(env, "CommandName param was not passed::command").ThrowAsJavaScriptException();
+    TypeError::New(env, "CommandName param was not passed:CANCELALLORDERS|FLATTENEVERYTHING::command").ThrowAsJavaScriptException();
     return env.Undefined();
   }
   
   command = getCharFromString(info[0].ToString().Utf8Value());
-  if(command == "CANCELALLORDERS" || command == "FLATTENEVERYTHING") {
-    int returnvalue = (Command(command, account, instrument, action, quantity, ordertype, limitprice, stopprice, timeinforce, oco, orderid, strategy, strategyid) == -1 ? 0 : 1);
-    cout << returnvalue;
-    return Number::New(env, returnvalue);
-  }
   
-  if(command == "CLOSESTRATEGY") {
-    
-    if(info[1].IsString() == false) {
-      TypeError::New(env, "Strategy ID param was not passed:CLOSESTRATEGY::command").ThrowAsJavaScriptException();
-      return env.Undefined();
-    }
-    
-    strategyid = getCharFromString(info[1].ToString().Utf8Value());
-    
+  string cmd = info[0].ToString().Utf8Value();
+  
+  if(cmd == "CANCELALLORDERS" || cmd == "FLATTENEVERYTHING") {
     int returnvalue = (Command(command, account, instrument, action, quantity, ordertype, limitprice, stopprice, timeinforce, oco, orderid, strategy, strategyid) == -1 ? 0 : 1);
     return Number::New(env, returnvalue);
   }
+  else {
+    TypeError::New(env, "CommandName param was not passed:CANCELALLORDERS|FLATTENEVERYTHING::command").ThrowAsJavaScriptException();
+    return env.Undefined();
+  }
+}
+
+Value api::CommmandCLOSESTRATEGYWrapper(const CallbackInfo& info)
+{
+  Napi::Env env = info.Env();
   
-  if(command == "CLOSEPOSITION") {
-    
+  char* command = "CLOSESTRATEGY";
+  char* account = NULL;
+  char* instrument = NULL;
+  char* action = NULL;
+  int quantity = NULL;
+  char* ordertype = NULL;
+  double limitprice = NULL;
+  double stopprice = NULL;
+  char* timeinforce = NULL;
+  char* oco = NULL;
+  char* orderid = NULL;
+  char* strategy = NULL;
+  char* strategyid = NULL;
+  
+  /* REQUIRED */
+  if(info[0].IsString() == false) {
+    TypeError::New(env, "Strategy ID param was not passed:CLOSESTRATEGY::command").ThrowAsJavaScriptException();
+    return env.Undefined();
+  }
+
+  strategyid = getCharFromString(info[0].ToString().Utf8Value());
+
+  int returnvalue = (Command(command, account, instrument, action, quantity, ordertype, limitprice, stopprice, timeinforce, oco, orderid, strategy, strategyid) == -1 ? 0 : 1);
+  return Number::New(env, returnvalue);
+}
+
+Value api::CommmandCLOSEPOSITIONWrapper(const CallbackInfo& info)
+{
+  Napi::Env env = info.Env();
+  
+  char* command = "CLOSEPOSITION";
+  char* account = NULL;
+  char* instrument = NULL;
+  char* action = NULL;
+  int quantity = NULL;
+  char* ordertype = NULL;
+  double limitprice = NULL;
+  double stopprice = NULL;
+  char* timeinforce = NULL;
+  char* oco = NULL;
+  char* orderid = NULL;
+  char* strategy = NULL;
+  char* strategyid = NULL;
+  
+  /* REQUIRED */
+  account = (info[0].IsString() != false ? getCharFromString(info[0].ToString().Utf8Value()) : AccountConfig);
+
+  instrument = (info[1].IsString() != false ? getCharFromString(info[1].ToString().Utf8Value()) : InstrumentConfig);
+
+  int returnvalue = (Command(command, account, instrument, action, quantity, ordertype, limitprice, stopprice, timeinforce, oco, orderid, strategy, strategyid) == -1 ? 0 : 1);
+  return Number::New(env, returnvalue);
+}
+
+Value api::CommmandCANCELWrapper(const CallbackInfo& info)
+{
+  Napi::Env env = info.Env();
+  
+  char* command = "CANCEL";
+  char* account = NULL;
+  char* instrument = NULL;
+  char* action = NULL;
+  int quantity = NULL;
+  char* ordertype = NULL;
+  double limitprice = NULL;
+  double stopprice = NULL;
+  char* timeinforce = NULL;
+  char* oco = NULL;
+  char* orderid = NULL;
+  char* strategy = NULL;
+  char* strategyid = NULL;
+  
+  /* REQUIRED */
+  if(info[0].IsString() == false) {
+    TypeError::New(env, "Order ID param was not passed:CANCEL::command").ThrowAsJavaScriptException();
+    return env.Undefined();
+  }
+
+  orderid = getCharFromString(info[0].ToString().Utf8Value());
+
+  /* OPTIONAL */
+  if(info[1].IsString() != false) {
+    strategyid = getCharFromString(info[2].ToString().Utf8Value());
+  }
+  
+  int returnvalue = (Command(command, account, instrument, action, quantity, ordertype, limitprice, stopprice, timeinforce, oco, orderid, strategy, strategyid) == -1 ? 0 : 1);
+  return Number::New(env, returnvalue);
+}
+
+Value api::CommmandCHANGEWrapper(const CallbackInfo& info)
+{
+  Napi::Env env = info.Env();
+  
+  char* command = "CHANGE";
+  char* account = NULL;
+  char* instrument = NULL;
+  char* action = NULL;
+  int quantity = NULL;
+  char* ordertype = NULL;
+  double limitprice = NULL;
+  double stopprice = NULL;
+  char* timeinforce = NULL;
+  char* oco = NULL;
+  char* orderid = NULL;
+  char* strategy = NULL;
+  char* strategyid = NULL;
+  
+  /* REQUIRED */
+  if(info[0].IsString() == false) {
+    TypeError::New(env, "Order ID param was not passed:CHANGE::command").ThrowAsJavaScriptException();
+    return env.Undefined();
+  }
+
+  orderid = getCharFromString(info[0].ToString().Utf8Value());
+
+  /* OPTIONAL */
+  if(info[1].IsString() != false || info[1].IsNumber() != false) {
+    quantity =  info[1].ToNumber().Int32Value();
+  }
+
+  if(info[2].IsString() != false || info[2].IsNumber() != false) {
+    limitprice = info[2].ToNumber().DoubleValue();
+  }
+
+  if(info[3].IsString() != false || info[3].IsNumber() != false) {
+    stopprice = info[3].ToNumber().DoubleValue();
+  }
+
+  if(info[4].IsString() != false) {
+    strategyid = getCharFromString(info[4].ToString().Utf8Value());
+  }
+
+  int returnvalue = (Command(command, account, instrument, action, quantity, ordertype, limitprice, stopprice, timeinforce, oco, orderid, strategy, strategyid) == -1 ? 0 : 1);
+  return Number::New(env, returnvalue);
+}
+
+Value api::CommmandPLACEWrapper(const CallbackInfo& info)
+{
+  Napi::Env env = info.Env();
+  
+  char* command = NULL;
+  char* account = NULL;
+  char* instrument = NULL;
+  char* action = NULL;
+  int quantity = NULL;
+  char* ordertype = NULL;
+  double limitprice = NULL;
+  double stopprice = NULL;
+  char* timeinforce = NULL;
+  char* oco = NULL;
+  char* orderid = NULL;
+  char* strategy = NULL;
+  char* strategyid = NULL;
+  
+  if(info[0].IsString() == false) {
+    TypeError::New(env, "CommandName param was not passed:PLACE|REVERSEPOSITION::command").ThrowAsJavaScriptException();
+    return env.Undefined();
+  }
+  
+  command = getCharFromString(info[0].ToString().Utf8Value());
+  
+  string cmd = info[0].ToString().Utf8Value();
+  
+  if(cmd == "PLACE" || cmd == "REVERSEPOSITION") {
+    /* REQUIRED */
     if(info[1].IsString() == false) {
-      TypeError::New(env, "Account param was not passed:CLOSEPOSITION::command").ThrowAsJavaScriptException();
+      TypeError::New(env, "Account param was not passed:PLACE|REVERSEPOSITION::command").ThrowAsJavaScriptException();
       return env.Undefined();
     }
     
     account = getCharFromString(info[1].ToString().Utf8Value());
     
     if(info[2].IsString() == false) {
-      TypeError::New(env, "Instrument param was not passed:CLOSEPOSITION::command").ThrowAsJavaScriptException();
+      TypeError::New(env, "Instrument param was not passed:PLACE|REVERSEPOSITION::command").ThrowAsJavaScriptException();
       return env.Undefined();
     }
     
     instrument = getCharFromString(info[2].ToString().Utf8Value());
     
-    int returnvalue = (Command(command, account, instrument, action, quantity, ordertype, limitprice, stopprice, timeinforce, oco, orderid, strategy, strategyid) == -1 ? 0 : 1);
-    return Number::New(env, returnvalue);
-  }
-  
-  if(command == "CANCEL") {
-
-    if(info[1].IsString() == false) {
-      TypeError::New(env, "Order ID param was not passed:CANCEL::command").ThrowAsJavaScriptException();
+    if(info[3].IsString() == false) {
+      TypeError::New(env, "Action param was not passed:PLACE|REVERSEPOSITION::command").ThrowAsJavaScriptException();
       return env.Undefined();
     }
     
-    orderid = getCharFromString(info[1].ToString().Utf8Value());
+    action = getCharFromString(info[3].ToString().Utf8Value());
     
-    if(info[2].IsString() == false) {
-      int returnvalue = (Command(command, account, instrument, action, quantity, ordertype, limitprice, stopprice, timeinforce, oco, orderid, strategy, strategyid) == -1 ? 0 : 1);
-      return Number::New(env, returnvalue);
+    if(info[4].IsString() != false || info[4].IsNumber() != false) {
+      quantity = info[4].ToNumber().Int32Value();
+    }
+    else {
+      TypeError::New(env, "Qty param was not passed:PLACE|REVERSEPOSITION::command").ThrowAsJavaScriptException();
+      return env.Undefined();
     }
     
-    strategyid = getCharFromString(info[2].ToString().Utf8Value());
+    if(info[5].IsString() == false) {
+      TypeError::New(env, "Order type param was not passed:PLACE|REVERSEPOSITION::command").ThrowAsJavaScriptException();
+      return env.Undefined();
+    }
+    
+    ordertype = getCharFromString(info[5].ToString().Utf8Value());
+    
+    if(info[6].IsString() == false) {
+      TypeError::New(env, "TIF param was not passed:PLACE|REVERSEPOSITION::command").ThrowAsJavaScriptException();
+      return env.Undefined();
+    }
+    
+    timeinforce = getCharFromString(info[6].ToString().Utf8Value());
+    
+    /* OPTIONAL */
+    if(info[7].IsString() != false || info[2].IsNumber() != false) {
+      limitprice = info[7].ToNumber().DoubleValue();
+    }
+    
+    if(info[8].IsString() != false || info[2].IsNumber() != false) {
+      stopprice = info[8].ToNumber().DoubleValue();
+    }
+    
+    if(info[9].IsString() != false) {
+      oco = getCharFromString(info[9].ToString().Utf8Value());
+    }
+    
+    if(info[10].IsString() != false) {
+      orderid = getCharFromString(info[10].ToString().Utf8Value());
+    }
+    
+    if(info[11].IsString() != false) {
+      strategy = getCharFromString(info[11].ToString().Utf8Value());
+    }
+    
+    if(info[12].IsString() != false) {
+      strategyid = getCharFromString(info[12].ToString().Utf8Value());
+    }
     
     int returnvalue = (Command(command, account, instrument, action, quantity, ordertype, limitprice, stopprice, timeinforce, oco, orderid, strategy, strategyid) == -1 ? 0 : 1);
     return Number::New(env, returnvalue);
   }
-  
-  /* THE OVERLOADS FOR THESE ARE ANNOYING */
-  
-  return env.Undefined();
+  else {
+    TypeError::New(env, "CommandName param was not passed:PLACE|REVERSEPOSITION::command").ThrowAsJavaScriptException();
+    return env.Undefined();
+  }
 }
 
 Value api::ConfirmOrdersWrapper(const CallbackInfo& info)
@@ -836,8 +1028,16 @@ Object api::Init(Env env, Object exports)
   exports.Set("bidPlayback", Function::New(env, api::BidPlaybackWrapper));
   exports.Set("buyingPower", Function::New(env, api::BuyingPowerWrapper));
   exports.Set("cashValue", Function::New(env, api::CashValueWrapper));
-  /* Does not work, do not know how to overload or call properly */
-  // exports.Set("command", Function::New(env, api::CommmandWrapper));
+  exports.Set("cancelAllOrders", Function::New(env, api::CommmandCANCELLALLORDERSWrapper));
+  exports.Set("flattenEverything", Function::New(env, api::CommmandCANCELLALLORDERSWrapper));
+  exports.Set("closeStrategy", Function::New(env, api::CommmandCLOSESTRATEGYWrapper));
+  exports.Set("closePosition", Function::New(env, api::CommmandCLOSEPOSITIONWrapper));
+  exports.Set("cancelOrder", Function::New(env, api::CommmandCANCELWrapper));
+  exports.Set("changeOrder", Function::New(env, api::CommmandCHANGEWrapper));
+  exports.Set("placeBuyOrder", Function::New(env, api::CommmandPLACEWrapper));
+  exports.Set("placeSellOrder", Function::New(env, api::CommmandPLACEWrapper));
+  exports.Set("reverseBuyPosition", Function::New(env, api::CommmandPLACEWrapper));
+  exports.Set("reverseSellPosition", Function::New(env, api::CommmandPLACEWrapper));
   exports.Set("confirmOrders", Function::New(env, api::ConfirmOrdersWrapper));
   exports.Set("connected", Function::New(env, api::ConnectedWrapper));
   exports.Set("filled", Function::New(env, api::FilledWrapper));

@@ -123,6 +123,7 @@ extern "C"
   double __stdcall CashValue(char* account);
   
   /* Function for submitting, cancelling and changing orders, positions and strategies. Refer to the Commands and Valid Parameters section for detailed information. A return value of 0 indicates success and -1 indicates an error. The Log tab will list context sensitive error information. */
+  int __stdcall Command(char* command, char* account = NULL, char* instrument = NULL, char* action = NULL, int quantity = NULL, char* orderType = NULL, double limitPrice = NULL, double stopPrice = NULL, char* timeInForce = NULL, char* oco = NULL, char* orderId = NULL, char* strategy = NULL, char* strategyId = NULL);
   
   /* The parameter confirm indicates if an order confirmation message will appear. This toggles the global option that can be set manually in the NinjaTrader Control Center by selecting the Tools menu and the menu item Options, then checking the "Confirm order placement" checkbox. A value of 1 sets this option to true, any other value sets this option to false. */
   int __stdcall ConfirmOrders(int confirm);
@@ -178,25 +179,4 @@ extern "C"
   /* Stops a market data stream for the specific instrument. A return value of 0 indicates success and -1 indicates an error. */
   int __stdcall UnsubscribeMarketData(char* instrument);
   
-  /* CANCELALLORDERS, FLATTENEVERYTHING, CHANGE */
-  int __stdcall Command(char* command, char* account, char* instrument, char* action, int quantity, char* orderType, double limitPrice, double stopPrice, 
- char* timeInForce, char* oco, char* orderId, char* strategy, char* strategyId);
 }
-
-/* CANCEL, CLOSESTRATEGY, CHANGE */
-// int __stdcall Command(char* command, char*);
-
-/* CANCEL, CLOSEPOSITION */
-// int __stdcall Command(char* command, char*, char*);
-
-/* CHANGE */
-/* int __stdcall Command(int, char* orderid);
-int __stdcall Command(double, char* orderid);
-int __stdcall Command(int, double, char* orderid);
-int __stdcall Command(double, double, char* orderid);
-int __stdcall Command(int, double, double, char* orderid);
-int __stdcall Command(int, char* orderid, char*);
-int __stdcall Command(double, char* orderid, char*);
-int __stdcall Command(int, double, char* orderid, char*);
-int __stdcall Command(double, double, char* orderid, char*);
-int __stdcall Command(int, double, double, char* orderid, char*); */

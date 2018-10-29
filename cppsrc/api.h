@@ -9,8 +9,12 @@ namespace api {
     Napi::Value BidPlaybackWrapper(const Napi::CallbackInfo& info);
     Napi::Value BuyingPowerWrapper(const Napi::CallbackInfo& info);
     Napi::Value CashValueWrapper(const Napi::CallbackInfo& info);
-    /* Does not work, do not know how to overload or call properly */
-    Napi::Value CommmandWrapper(const Napi::CallbackInfo& info);
+    Napi::Value CommmandCANCELLALLORDERSWrapper(const Napi::CallbackInfo& info);
+    Napi::Value CommmandCLOSESTRATEGYWrapper(const Napi::CallbackInfo& info);
+    Napi::Value CommmandCLOSEPOSITIONWrapper(const Napi::CallbackInfo& info);
+    Napi::Value CommmandCANCELWrapper(const Napi::CallbackInfo& info);
+    Napi::Value CommmandCHANGEWrapper(const Napi::CallbackInfo& info);
+    Napi::Value CommmandPLACEWrapper(const Napi::CallbackInfo& info);
     Napi::Value ConfirmOrdersWrapper(const Napi::CallbackInfo& info);
 	Napi::Value ConnectedWrapper(const Napi::CallbackInfo& info);
     Napi::Value FilledWrapper(const Napi::CallbackInfo& info);

@@ -92,6 +92,36 @@ Gets the buying power for the specified account. *Not all brokerage technologies
 #### cashValue (account (string)(optional))
 Gets the cash value for the specified account. *Not all brokerage technologies support this value.
 
+#### cancelAllOrders ()
+This will cancel all active orders across all accounts and broker connections.
+
+#### flattenEverything ()
+This will cancel all active orders and flatten all positions across all accounts and broker connections.
+
+#### closeStrategy (strategy id (string))
+This will close an ATM Strategy. The strategy ID value must match a strategy ID given to a strategy in the placeOrder method. This will close the specified strategy.
+
+#### closePosition (Account (string)(optional), Instrument (string)(optional))
+This will close a position. The instrument name value is the name of the NinjaTrader instrument including the exchange name. For equities, the symbol is sufficient. This will cancel any working orders and flatten the position.
+
+#### cancelOrder (order id (string), strategy id (string)(optional))
+This will cancel an order. The order ID value must match either the order ID value given to an order placed through the placeBuyOrder/placeSellOrder command or, an order name such as ENTRY*, EXIT*, STOP*, SIMSTOP* or TARGET*. The star (*) represents an integer value such as TARGET1 or TARGET2. Order names are only valid if a valid strategy ID value is passed. The strategy ID value must match a strategy ID value given to a strategy in the placeBuyOrder/placeSellOrder method.
+
+#### changeOrder (order id (string), quantity (number)(optional), limitprice (number)(optional), stopprice (number)(optional), strategy id (string)(optional))
+This will change the parameters of an order. The order ID value must match either the order ID value given to an order placed through the placeBuyOrder/placeSellOrder method or, an order name such as ENTRY*, EXIT*, STOP*, SIMSTOP* or TARGET*. The star (*) represents an integer value such as TARGET1 or TARGET2. Order names are only valid if a valid strategy ID value is passed. Pass in zero (0) values for limitprice, stopprice and quantity if you do not wish to change these order parameters. Price values must be in US decimal format (1212.25 is correct while 1212,25 is not).
+
+#### placeBuyOrder (account (string), instrument (string), quantity (number), order type (string)(MARKET|LIMIT|STOP|STOPLIMIT), TIF (string)(DAY|GTC), limitprice (number)(optional), stopprice (number)(optional), oco (string)(optional), order id (string)(optional), strategy (string)(optional), strategy id (string)(optional))
+This will place a buy order, place orders that initiate a NinjaTrader ATM Strategy, or place orders that are applied to an active NinjaTrader position ATM Strategy. Providing the optional strategy name field with a valid ATM Strategy template name will result in execution of that ATM Strategy once the order is partially or completely filled. Pass in an optional unique string value for the strategy ID in order to reference that ATM Strategy via other commands. To apply an order to an active ATM Strategy (existing strategies Stop Loss and Profit Target orders are amended) pass in the active strategy ID value and leave the strategy name field blank. Pass in an optional unique string value for the order ID in order to reference that order via other methods. If specifying an ATM Strategy template name, there is no need to pass in an order ID as the strategy based orders can be referenced by their internally generated names such as TARGET1, STOP1 and so on.
+
+#### placeSellOrder (account (string), instrument (string), quantity (number), order type (string)(MARKET|LIMIT|STOP|STOPLIMIT), TIF (string)(DAY|GTC), limitprice (number)(optional), stopprice (number)(optional), oco (string)(optional), order id (string)(optional), strategy (string)(optional), strategy id (string)(optional))
+This will place a sell order, place orders that initiate a NinjaTrader ATM Strategy, or place orders that are applied to an active NinjaTrader position ATM Strategy. Providing the optional strategy name field with a valid ATM Strategy template name will result in execution of that ATM Strategy once the order is partially or completely filled. Pass in an optional unique string value for the strategy ID in order to reference that ATM Strategy via other commands. To apply an order to an active ATM Strategy (existing strategies Stop Loss and Profit Target orders are amended) pass in the active strategy ID value and leave the strategy name field blank. Pass in an optional unique string value for the order ID in order to reference that order via other methods. If specifying an ATM Strategy template name, there is no need to pass in an order ID as the strategy based orders can be referenced by their internally generated names such as TARGET1, STOP1 and so on.
+
+#### reverseBuyPosition (account (string), instrument (string), quantity (number), order type (string)(MARKET|LIMIT|STOP|STOPLIMIT), TIF (string)(DAY|GTC), limitprice (number)(optional), stopprice (number)(optional), oco (string)(optional), order id (string)(optional), strategy (string)(optional), strategy id (string)(optional))
+This will close the current position and place an order in the opposite direction. The field requirements are identical to the placeBuyOrder method.
+
+#### reverseSellPosition (account (string), instrument (string), quantity (number), order type (string)(MARKET|LIMIT|STOP|STOPLIMIT), TIF (string)(DAY|GTC), limitprice (number)(optional), stopprice (number)(optional), oco (string)(optional), order id (string)(optional), strategy (string)(optional), strategy id (string)(optional))
+This will close the current position and place an order in the opposite direction. The field requirements are identical to the placeSellOrder method.
+
 #### confirmOrders (confirm (bool))
 The parameter confirm indicates if an order confirmation message will appear. This toggles the global option that can be set manually in the NinjaTrader Control Center by selecting the Tools menu and the menu item Options, then checking the "Confirm order placement" checkbox.
 
