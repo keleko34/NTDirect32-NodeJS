@@ -1,0 +1,45 @@
+{
+  "name": "ntdirect32",
+  "version": "0.0.1",
+  "description": "a nodejs wrapper for the Ninja Trader NtDirect dll",
+  "main": "init.js",
+  "gypfile": true,
+  "scripts": {
+    "start": "node init.js",
+    "build:dev": "node-gyp -j 16 --arch=ia32 build --debug",
+    "build": "node-gyp -j 16 --arch=ia32 build",
+    "rebuild:dev": "node-gyp -j 16 --arch=ia32 rebuild --debug",
+    "rebuild": "node-gyp -j 16 --arch=ia32 rebuild",
+    "clean": "node-gyp clean configure --nodedir=\"D:/dev/node\""
+  },
+  "keywords": [
+    "ninja",
+    "trader",
+    "ntdirect",
+    "trading"
+  ],
+  "author": "keleko34",
+  "license": "MIT",
+  "devDependencies": {
+    "node-gyp": "^3.8.0"
+  },
+  "dependencies": {
+    "nan": "^2.11.1",
+    "node-addon-api": "^1.5.0"
+  },
+  "eslintConfig": {
+    "env": {
+      "node": true
+    },
+    "globals": {
+      "module": true,
+      "require": true
+    },
+    "rules": {
+      "no-console": "off"
+    },
+    "parserOptions": {
+      "ecmaVersion": 2017
+    }
+  }
+}

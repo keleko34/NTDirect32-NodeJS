@@ -1,0 +1,8 @@
+/.vscode
+binding.sln
+config.gypi
+*.vcxproj
+*.vcxproj.filters
+*.vcxproj.user
+NtDirect.dll
+/node_modules

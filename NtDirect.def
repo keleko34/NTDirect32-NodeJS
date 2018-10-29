@@ -1,0 +1,35 @@
+LIBRARY NtDirect
+
+EXPORTS
+Ask@16                   @1
+AskPlayback@20           @2
+AvgEntryPrice@8          @3
+AvgFillPrice@4           @4
+Bid@16                   @5
+BidPlayback@20           @6
+BuyingPower@4            @7
+CashValue@4              @8
+Command@60               @9               
+ConfirmOrders@4          @10
+Connected@4              @11
+Filled@4                 @12
+GetSpecialFolder@0       @13
+Last@16                  @14
+LastPlayback@20          @15
+MarketData@8             @16
+MarketPosition@8         @17
+NewOrderId@0             @18
+OrderStatus@4            @19
+Orders                   @20
+QueryInstrument@4        @21
+RealizedPnL@4            @22
+SetAllocReturnString     @23
+SetMaxReturnStringLength @24
+SetUp@8                  @25
+StopOrders@4             @26
+Strategies@4             @27
+StrategyPosition@4       @28
+SubscribeMarketData@4    @29
+TargetOrders@4           @30
+TearDown@0               @31
+UnsubscribeMarketData@4  @32
