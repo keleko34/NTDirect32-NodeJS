@@ -1,6 +1,6 @@
 {
   "name": "ntdirect32",
-  "version": "1.0.2",
+  "version": "1.0.4",
   "description": "a nodejs wrapper for the Ninja Trader NtDirect dll",
   "main": "init.js",
   "gypfile": true,
