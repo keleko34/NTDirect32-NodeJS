@@ -1,8 +1,8 @@
 # NTDirect32
 > NodeJS Wrapper for the Ninja Trader 7 NtDirect.dll api
 
-- ![][warning] This is a 32-bit windows module only due to dll supporting only 32-bit
-- ![][warning] You must install Ninja trader 7 in order to use this module (also must be running for interaction)
+![][warning] This is a 32-bit windows only module, due to dll supporting only 32-bit
+![][warning] You must install Ninja trader 7 in order to use this module (also must be running for interaction)
 
 [![NPM version][npm-image]][npm-url]
 
@@ -94,7 +94,7 @@ Gets the cash value for the specified account. *Not all brokerage technologies s
 #### confirmOrders (confirm (bool))
 The parameter confirm indicates if an order confirmation message will appear. This toggles the global option that can be set manually in the NinjaTrader Control Center by selecting the Tools menu and the menu item Options, then checking the "Confirm order placement" checkbox.
 
-### connected (showMessage (bool))
+#### connected (showMessage (bool))
 Returns a value of 1 if a connection has been established to the NinjaTrader server (application) and if the ATI is currently enabled or, 0 if it is disconnected. Calling any function in the library will automatically initiate a connection to the server. The parameter showMessage indicates if a message box is displayed in case the connection cannot be established.
 
 #### filled (order id (string))
@@ -134,7 +134,7 @@ Gets an array of strategy ID's of all ATM Strategies of an account. Duplicate ID
 Gets the position for a strategy. Returns flat, short, or long.
 
 #### subscribeMarketData (instrument (string)(optional))
-Starts a market data stream for the specific instrument. Call the MarketData() function to retrieve prices. Make sure you call the UnSubscribeMarketData() function to close the data stream. A return value of 1 indicates success and 0 indicates an error.
+Starts a market data stream for the specific instrument. Call the MarketData() function to retrieve prices. Make sure you call the UnSubscribeMarketData() function to close the data stream. A return value of 1 indicates success and 0 indicates an error. subscribeMarketData is also called when the instrument config default is set.
 
 #### targetOrders (strategy id (string))
 Gets an array of order ID's of all Profit Target orders of an ATM Strategy. Internal token ID value is used since it is guaranteed to be unique.
@@ -143,7 +143,7 @@ Gets an array of order ID's of all Profit Target orders of an ATM Strategy. Inte
 Disconnects the DLL from the NinjaTrader server. A return value of 1 indicates success and 0 indicates an error. This automatically happens when node crashes or exits.
 
 #### unsubscribeMarketData(instrument (string)(optional))
-Stops a market data stream for the specific instrument. A return value of 1 indicates success and 0 indicates an error.
+Stops a market data stream for the specific instrument. A return value of 1 indicates success and 0 indicates an error. unsubscribeMarketData is also called when the instrument config changes the default instrument.
 
 How to contribute
 ============
