@@ -8,7 +8,10 @@ var askPlayback = NTDirect32.askPlayback,
     lastPlayback = NTDirect32.lastPlayback,
     confirmOrders = NTDirect32.confirmOrders,
     connected = NTDirect32.connected,
-    marketData = NTDirect32.marketData;
+    marketData = NTDirect32.marketData,
+    stopOrders = NTDirect32.stopOrders,
+    strategies = NTDirect32.strategies,
+    targetOrders = NTDirect32.targetOrders;
 
 NTDirect32.askPlayback = function()
 {
@@ -70,6 +73,10 @@ NTDirect32.marketData = function()
   
   return marketData.apply(this, arguments);
 }
+
+NTDirect32.stopOrders = function(){ return stopOrders.apply(this, arguments).split("|"); }
+NTDirect32.strategies = function(){ return strategies.apply(this, arguments).split("|"); }
+NTDirect32.targetOrders = function(){ return targetOrders.apply(this, arguments).split("|"); }
 
 process.on('exit', NTDirect32.tearDown);
 process.on('uncaughtException', process.exit);

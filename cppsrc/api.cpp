@@ -854,7 +854,7 @@ Object api::Init(Env env, Object exports)
   exports.Set("strategyPosition", Function::New(env, api::StrategyPositionWrapper));
   exports.Set("subscribeMarketData", Function::New(env, api::SubscribeMarketDataWrapper));
   exports.Set("targetOrders", Function::New(env, api::TargetOrdersWrapper));
-  exports.Set("teardown", Function::New(env, api::TearDownWrapper));
+  exports.Set("tearDown", Function::New(env, api::TearDownWrapper));
   exports.Set("unsubscribeMarketData", Function::New(env, api::UnsubscribeMarketDataWrapper));
   exports.Set("config", Function::New(env, api::Config));
   exports.Set("host", Function::New(env, api::Host));

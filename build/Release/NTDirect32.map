@@ -1,6 +1,6 @@
  NTDirect32
 
- Timestamp is 5bd6ff29 (Mon Oct 29 13:38:01 2018)
+ Timestamp is 5bd7004c (Mon Oct 29 13:42:52 2018)
 
  Preferred load address is 10000000
 
@@ -76,13 +76,13 @@
  0001:00000150       ?what@exception@stdext@@UBEPBDXZ 10001150 f i api.obj
  0001:00000160       ?_Raise@exception@stdext@@QBEXXZ 10001160 f i api.obj
  0001:00000190       ?_Doraise@exception@stdext@@MBEXXZ 10001190 f i api.obj
- 0001:00000190       ?_Lock@?$basic_streambuf@DU?$char_traits@D@std@@@std@@UAEXXZ 10001190 f i libcpmt:cout.obj
  0001:00000190       @_guard_check_icall_nop@4  10001190 f i LIBCMT:guard_support.obj
  0001:00000190       ?_Unlock@?$basic_streambuf@DU?$char_traits@D@std@@@std@@UAEXXZ 10001190 f i libcpmt:cout.obj
+ 0001:00000190       ?_Lock@?$basic_streambuf@DU?$char_traits@D@std@@@std@@UAEXXZ 10001190 f i libcpmt:cout.obj
  0001:000001a0       ??_Eexception@stdext@@UAEPAXI@Z 100011a0 f i * CIL library *:* CIL module *
- 0001:000001a0       ??_Gruntime_error@std@@UAEPAXI@Z 100011a0 f i api.obj
  0001:000001a0       ??_Eruntime_error@std@@UAEPAXI@Z 100011a0 f i * CIL library *:* CIL module *
  0001:000001a0       ??_Gexception@stdext@@UAEPAXI@Z 100011a0 f i api.obj
+ 0001:000001a0       ??_Gruntime_error@std@@UAEPAXI@Z 100011a0 f i api.obj
  0001:000001d0       ??0runtime_error@std@@QAE@PBD@Z 100011d0 f i api.obj
  0001:000001f0       ??0_Locinfo@std@@QAE@PBD@Z 100011f0 f i api.obj
  0001:00000270       ??1_Locinfo@std@@QAE@XZ    10001270 f i api.obj
@@ -103,17 +103,17 @@
  0001:00000520       ?do_widen@?$ctype@D@std@@MBEPBDPBD0PAD@Z 10001520 f i api.obj
  0001:00000540       ?do_narrow@?$ctype@D@std@@MBEDDD@Z 10001540 f i api.obj
  0001:00000550       ?do_narrow@?$ctype@D@std@@MBEPBDPBD0DPAD@Z 10001550 f i api.obj
- 0001:00000570       ??_E?$ctype@D@std@@MAEPAXI@Z 10001570 f i * CIL library *:* CIL module *
  0001:00000570       ??_G?$ctype@D@std@@MAEPAXI@Z 10001570 f i api.obj
+ 0001:00000570       ??_E?$ctype@D@std@@MAEPAXI@Z 10001570 f i * CIL library *:* CIL module *
  0001:000005c0       ?default_error_condition@error_category@std@@UBE?AVerror_condition@2@H@Z 100015c0 f i api.obj
  0001:000005d0       ?equivalent@error_category@std@@UBE_NHABVerror_condition@2@@Z 100015d0 f i api.obj
  0001:00000610       ?equivalent@error_category@std@@UBE_NABVerror_code@2@H@Z 10001610 f i api.obj
  0001:00000640       ?make_error_code@std@@YA?AVerror_code@1@W4io_errc@1@@Z 10001640 f i api.obj
  0001:00000670       ??0_System_error@std@@IAE@Verror_code@1@ABV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@1@@Z 10001670 f i api.obj
- 0001:000008e0       ??_G_System_error@std@@UAEPAXI@Z 100018e0 f i api.obj
+ 0001:000008e0       ??_Gfailure@ios_base@std@@UAEPAXI@Z 100018e0 f i api.obj
  0001:000008e0       ??_E_System_error@std@@UAEPAXI@Z 100018e0 f i * CIL library *:* CIL module *
  0001:000008e0       ??_Efailure@ios_base@std@@UAEPAXI@Z 100018e0 f i * CIL library *:* CIL module *
- 0001:000008e0       ??_Gfailure@ios_base@std@@UAEPAXI@Z 100018e0 f i api.obj
+ 0001:000008e0       ??_G_System_error@std@@UAEPAXI@Z 100018e0 f i api.obj
  0001:00000910       ?name@_Iostream_error_category@std@@UBEPBDXZ 10001910 f i api.obj
  0001:00000920       ?message@_Iostream_error_category@std@@UBE?AV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@2@H@Z 10001920 f i api.obj
  0001:00000960       ??_E_Iostream_error_category@std@@UAEPAXI@Z 10001960 f i * CIL library *:* CIL module *
@@ -169,8 +169,8 @@
  0001:000076a0       ?Init@api@@YA?AVObject@Napi@@VEnv@3@V23@@Z 100086a0 f   api.obj
  0001:00008050       ?reserve@?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@QAEXI@Z 10009050 f i api.obj
  0001:000081d0       ?resize@?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@QAEXID@Z 100091d0 f i api.obj
- 0001:00008240       ??1?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@QAE@XZ 10009240 f i api.obj
  0001:00008240       ?_Tidy_deallocate@?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@QAEXXZ 10009240 f i api.obj
+ 0001:00008240       ??1?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@QAE@XZ 10009240 f i api.obj
  0001:00008290       ??0?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@QAE@QBD@Z 10009290 f i api.obj
  0001:000083d0       ?_Xran@?$_String_val@U?$_Simple_types@D@std@@@std@@SAXXZ 100093d0 f i api.obj
  0001:000083e0       ??$use_facet@V?$ctype@D@std@@@std@@YAABV?$ctype@D@0@ABVlocale@0@@Z 100093e0 f i api.obj
@@ -222,22 +222,22 @@
  0001:00008d62       ??1_Lockit@std@@QAE@XZ     10009d62 f   libcpmt:xlock.obj
  0001:00008d81       ??0exception@std@@QAE@ABV01@@Z 10009d81 f i libcpmt:xonce.obj
  0001:00008dad       ??0exception@std@@QAE@QBD@Z 10009dad f i libcpmt:xonce.obj
- 0001:00008de2       ??_Eout_of_range@std@@UAEPAXI@Z 10009de2 f i libcpmt:xthrow.obj
- 0001:00008de2       ??_Gbad_array_new_length@std@@UAEPAXI@Z 10009de2 f i LIBCMT:throw_bad_alloc.obj
- 0001:00008de2       ??_Gexception@std@@UAEPAXI@Z 10009de2 f i libcpmt:xonce.obj
- 0001:00008de2       ??_Elength_error@std@@UAEPAXI@Z 10009de2 f i libcpmt:xthrow.obj
- 0001:00008de2       ??_Eexception@std@@UAEPAXI@Z 10009de2 f i libcpmt:xonce.obj
- 0001:00008de2       ??_Gbad_alloc@std@@UAEPAXI@Z 10009de2 f i libcpmt:xthrow.obj
- 0001:00008de2       ??_Gbad_cast@std@@UAEPAXI@Z 10009de2 f i libcpmt:cout.obj
- 0001:00008de2       ??_Elogic_error@std@@UAEPAXI@Z 10009de2 f i libcpmt:xthrow.obj
- 0001:00008de2       ??_Ebad_array_new_length@std@@UAEPAXI@Z 10009de2 f i LIBCMT:throw_bad_alloc.obj
  0001:00008de2       ??_Glogic_error@std@@UAEPAXI@Z 10009de2 f i libcpmt:xthrow.obj
- 0001:00008de2       ??_Ebad_cast@std@@UAEPAXI@Z 10009de2 f i libcpmt:cout.obj
- 0001:00008de2       ??_Ebad_alloc@std@@UAEPAXI@Z 10009de2 f i libcpmt:xthrow.obj
- 0001:00008de2       ??_Gout_of_range@std@@UAEPAXI@Z 10009de2 f i libcpmt:xthrow.obj
- 0001:00008de2       ??_Glength_error@std@@UAEPAXI@Z 10009de2 f i libcpmt:xthrow.obj
- 0001:00008de2       ??_Ebad_exception@std@@UAEPAXI@Z 10009de2 f i libvcruntime:frame.obj
+ 0001:00008de2       ??_Gbad_alloc@std@@UAEPAXI@Z 10009de2 f i libcpmt:xthrow.obj
+ 0001:00008de2       ??_Eexception@std@@UAEPAXI@Z 10009de2 f i libcpmt:xonce.obj
+ 0001:00008de2       ??_Ebad_array_new_length@std@@UAEPAXI@Z 10009de2 f i LIBCMT:throw_bad_alloc.obj
+ 0001:00008de2       ??_Gbad_cast@std@@UAEPAXI@Z 10009de2 f i libcpmt:cout.obj
  0001:00008de2       ??_Gbad_exception@std@@UAEPAXI@Z 10009de2 f i libvcruntime:frame.obj
+ 0001:00008de2       ??_Gexception@std@@UAEPAXI@Z 10009de2 f i libcpmt:xonce.obj
+ 0001:00008de2       ??_Gout_of_range@std@@UAEPAXI@Z 10009de2 f i libcpmt:xthrow.obj
+ 0001:00008de2       ??_Ebad_cast@std@@UAEPAXI@Z 10009de2 f i libcpmt:cout.obj
+ 0001:00008de2       ??_Eout_of_range@std@@UAEPAXI@Z 10009de2 f i libcpmt:xthrow.obj
+ 0001:00008de2       ??_Elogic_error@std@@UAEPAXI@Z 10009de2 f i libcpmt:xthrow.obj
+ 0001:00008de2       ??_Gbad_array_new_length@std@@UAEPAXI@Z 10009de2 f i LIBCMT:throw_bad_alloc.obj
+ 0001:00008de2       ??_Ebad_exception@std@@UAEPAXI@Z 10009de2 f i libvcruntime:frame.obj
+ 0001:00008de2       ??_Glength_error@std@@UAEPAXI@Z 10009de2 f i libcpmt:xthrow.obj
+ 0001:00008de2       ??_Ebad_alloc@std@@UAEPAXI@Z 10009de2 f i libcpmt:xthrow.obj
+ 0001:00008de2       ??_Elength_error@std@@UAEPAXI@Z 10009de2 f i libcpmt:xthrow.obj
  0001:00008e0f       ?_Execute_once@std@@YAHAAUonce_flag@1@P6GHPAX1PAPAX@Z1@Z 10009e0f f   libcpmt:xonce.obj
  0001:00008e27       ?what@exception@std@@UBEPBDXZ 10009e27 f i libcpmt:xonce.obj
  0001:00008e34       ??$_Fgetc@D@std@@YA_NAADPAU_iobuf@@@Z 10009e34 f i libcpmt:cout.obj
@@ -252,26 +252,26 @@
  0001:0000911a       ??1?$basic_filebuf@DU?$char_traits@D@std@@@std@@UAE@XZ 1000a11a f i libcpmt:cout.obj
  0001:00009172       ??1?$basic_ios@DU?$char_traits@D@std@@@std@@UAE@XZ 1000a172 f i libcpmt:cout.obj
  0001:000091b2       ??1?$basic_streambuf@DU?$char_traits@D@std@@@std@@UAE@XZ 1000a1b2 f i libcpmt:cout.obj
- 0001:000091d3       ??1bad_exception@std@@UAE@XZ 1000a1d3 f i libvcruntime:frame.obj
- 0001:000091d3       ??1bad_cast@std@@UAE@XZ    1000a1d3 f i libcpmt:cout.obj
  0001:000091d3       ??1out_of_range@std@@UAE@XZ 1000a1d3 f i libcpmt:xthrow.obj
- 0001:000091d3       ??1bad_alloc@std@@UAE@XZ   1000a1d3 f i libcpmt:xthrow.obj
- 0001:000091d3       ??1bad_array_new_length@std@@UAE@XZ 1000a1d3 f i LIBCMT:throw_bad_alloc.obj
+ 0001:000091d3       ??1bad_cast@std@@UAE@XZ    1000a1d3 f i libcpmt:cout.obj
+ 0001:000091d3       ??1bad_exception@std@@UAE@XZ 1000a1d3 f i libvcruntime:frame.obj
  0001:000091d3       ??1length_error@std@@UAE@XZ 1000a1d3 f i libcpmt:xthrow.obj
+ 0001:000091d3       ??1bad_array_new_length@std@@UAE@XZ 1000a1d3 f i LIBCMT:throw_bad_alloc.obj
+ 0001:000091d3       ??1bad_alloc@std@@UAE@XZ   1000a1d3 f i libcpmt:xthrow.obj
  0001:000091e4       ??_D?$basic_ostream@DU?$char_traits@D@std@@@std@@QAEXXZ 1000a1e4 f i libcpmt:cout.obj
  0001:00009242       ??_E?$basic_ostream@DU?$char_traits@D@std@@@std@@$4PPPPPPPM@A@AEPAXI@Z 1000a242 f i libcpmt:cout.obj
  0001:0000924a       ??_E?$basic_filebuf@DU?$char_traits@D@std@@@std@@UAEPAXI@Z 1000a24a f i libcpmt:cout.obj
  0001:0000924a       ??_G?$basic_filebuf@DU?$char_traits@D@std@@@std@@UAEPAXI@Z 1000a24a f i libcpmt:cout.obj
  0001:0000926c       ??_E?$basic_ios@DU?$char_traits@D@std@@@std@@UAEPAXI@Z 1000a26c f i libcpmt:cout.obj
  0001:0000926c       ??_G?$basic_ios@DU?$char_traits@D@std@@@std@@UAEPAXI@Z 1000a26c f i libcpmt:cout.obj
- 0001:000092c4       ??_E?$basic_ostream@DU?$char_traits@D@std@@@std@@UAEPAXI@Z 1000a2c4 f i libcpmt:cout.obj
  0001:000092c4       ??_G?$basic_ostream@DU?$char_traits@D@std@@@std@@UAEPAXI@Z 1000a2c4 f i libcpmt:cout.obj
- 0001:000092e9       ??_E?$basic_streambuf@DU?$char_traits@D@std@@@std@@UAEPAXI@Z 1000a2e9 f i libcpmt:cout.obj
+ 0001:000092c4       ??_E?$basic_ostream@DU?$char_traits@D@std@@@std@@UAEPAXI@Z 1000a2c4 f i libcpmt:cout.obj
  0001:000092e9       ??_G?$basic_streambuf@DU?$char_traits@D@std@@@std@@UAEPAXI@Z 1000a2e9 f i libcpmt:cout.obj
+ 0001:000092e9       ??_E?$basic_streambuf@DU?$char_traits@D@std@@@std@@UAEPAXI@Z 1000a2e9 f i libcpmt:cout.obj
  0001:0000930b       ??_G?$codecvt@DDU_Mbstatet@@@std@@MAEPAXI@Z 1000a30b f i libcpmt:cout.obj
  0001:0000930b       ??_E?$codecvt@DDU_Mbstatet@@@std@@MAEPAXI@Z 1000a30b f i libcpmt:cout.obj
- 0001:0000932e       ??_Eios_base@std@@UAEPAXI@Z 1000a32e f i libcpmt:cout.obj
  0001:0000932e       ??_Gios_base@std@@UAEPAXI@Z 1000a32e f i libcpmt:cout.obj
+ 0001:0000932e       ??_Eios_base@std@@UAEPAXI@Z 1000a32e f i libcpmt:cout.obj
  0001:00009386       ?_Endwrite@?$basic_filebuf@DU?$char_traits@D@std@@@std@@IAE_NXZ 1000a386 f i libcpmt:cout.obj
  0001:00009436       ?_Getcat@?$codecvt@DDU_Mbstatet@@@std@@SAIPAPBVfacet@locale@2@PBV42@@Z 1000a436 f i libcpmt:cout.obj
  0001:0000949e       ?_Init@?$basic_filebuf@DU?$char_traits@D@std@@@std@@IAEXPAU_iobuf@@W4_Initfl@12@@Z 1000a49e f i libcpmt:cout.obj
@@ -284,10 +284,10 @@
  0001:00009658       ?_Unlock@?$basic_filebuf@DU?$char_traits@D@std@@@std@@UAEXXZ 1000a658 f i libcpmt:cout.obj
  0001:00009668       ?always_noconv@codecvt_base@std@@QBE_NXZ 1000a668 f i libcpmt:cout.obj
  0001:00009680       ?close@?$basic_filebuf@DU?$char_traits@D@std@@@std@@QAEPAV12@XZ 1000a680 f i libcpmt:cout.obj
- 0001:000096df       ___acrt_uninitialize_command_line 1000a6df f i libucrt:argv_data.obj
  0001:000096df       ?do_always_noconv@?$codecvt@DDU_Mbstatet@@@std@@MBE_NXZ 1000a6df f i libcpmt:cout.obj
- 0001:000096e2       ?do_encoding@codecvt_base@std@@MBEHXZ 1000a6e2 f i libcpmt:cout.obj
+ 0001:000096df       ___acrt_uninitialize_command_line 1000a6df f i libucrt:argv_data.obj
  0001:000096e2       __get_startup_argv_mode    1000a6e2 f i LIBCMT:argv_mode.obj
+ 0001:000096e2       ?do_encoding@codecvt_base@std@@MBEHXZ 1000a6e2 f i libcpmt:cout.obj
  0001:000096e2       ?do_max_length@codecvt_base@std@@MBEHXZ 1000a6e2 f i libcpmt:cout.obj
  0001:000096e6       ?do_in@?$codecvt@DDU_Mbstatet@@@std@@MBEHAAU_Mbstatet@@PBD1AAPBDPAD3AAPAD@Z 1000a6e6 f i libcpmt:cout.obj
  0001:000096e6       ?do_out@?$codecvt@DDU_Mbstatet@@@std@@MBEHAAU_Mbstatet@@PBD1AAPBDPAD3AAPAD@Z 1000a6e6 f i libcpmt:cout.obj
@@ -298,8 +298,8 @@
  0001:00009790       ?imbue@?$basic_streambuf@DU?$char_traits@D@std@@@std@@MAEXABVlocale@2@@Z 1000a790 f i libcpmt:cout.obj
  0001:00009793       ?init@?$basic_ios@DU?$char_traits@D@std@@@std@@IAEXPAV?$basic_streambuf@DU?$char_traits@D@std@@@2@_N@Z 1000a793 f i libcpmt:cout.obj
  0001:000097dc       ?overflow@?$basic_filebuf@DU?$char_traits@D@std@@@std@@MAEHH@Z 1000a7dc f i libcpmt:cout.obj
- 0001:000098e4       ?pbackfail@?$basic_streambuf@DU?$char_traits@D@std@@@std@@MAEHH@Z 1000a8e4 f i libcpmt:cout.obj
  0001:000098e4       ?overflow@?$basic_streambuf@DU?$char_traits@D@std@@@std@@MAEHH@Z 1000a8e4 f i libcpmt:cout.obj
+ 0001:000098e4       ?pbackfail@?$basic_streambuf@DU?$char_traits@D@std@@@std@@MAEHH@Z 1000a8e4 f i libcpmt:cout.obj
  0001:000098ea       ?pbackfail@?$basic_filebuf@DU?$char_traits@D@std@@@std@@MAEHH@Z 1000a8ea f i libcpmt:cout.obj
  0001:0000996c       ?push_back@?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@QAEXD@Z 1000a96c f i libcpmt:cout.obj
  0001:000099a8       ?seekoff@?$basic_filebuf@DU?$char_traits@D@std@@@std@@MAE?AV?$fpos@U_Mbstatet@@@2@_JHH@Z 1000a9a8 f i libcpmt:cout.obj
@@ -325,8 +325,8 @@
  0001:0000a218       ??1_Fac_tidy_reg_t@std@@QAE@XZ 1000b218 f i libcpmt:locale0.obj
  0001:0000a23f       ??1_Locimp@locale@std@@MAE@XZ 1000b23f f i libcpmt:locale0.obj
  0001:0000a298       ??4?$_Yarn@D@std@@QAEAAV01@PBD@Z 1000b298 f i libcpmt:locale0.obj
- 0001:0000a2ec       ??_E_Locimp@locale@std@@MAEPAXI@Z 1000b2ec f i libcpmt:locale0.obj
  0001:0000a2ec       ??_G_Locimp@locale@std@@MAEPAXI@Z 1000b2ec f i libcpmt:locale0.obj
+ 0001:0000a2ec       ??_E_Locimp@locale@std@@MAEPAXI@Z 1000b2ec f i libcpmt:locale0.obj
  0001:0000a30e       ?_Facet_Register@std@@YAXPAV_Facet_base@1@@Z 1000b30e f   libcpmt:locale0.obj
  0001:0000a33a       ?_Getgloballocale@locale@std@@CAPAV_Locimp@12@XZ 1000b33a f   libcpmt:locale0.obj
  0001:0000a340       ?_Init@locale@std@@CAPAV_Locimp@12@_N@Z 1000b340 f   libcpmt:locale0.obj
@@ -425,8 +425,8 @@
  0001:0000c036       __SEH_epilog4              1000d036 f   LIBCMT:_sehprolg4_.obj
  0001:0000c04b       ___isa_available_init      1000d04b f   LIBCMT:_cpu_disp_.obj
  0001:0000c1e2       ___scrt_is_ucrt_dll_in_use 1000d1e2 f   LIBCMT:ucrt_detection.obj
- 0001:0000c1f0       __chkstk                   1000d1f0 f   LIBCMT:chkstk.obj
  0001:0000c1f0       __alloca_probe             1000d1f0 f   LIBCMT:chkstk.obj
+ 0001:0000c1f0       __chkstk                   1000d1f0 f   LIBCMT:chkstk.obj
  0001:0000c21d       __get_purecall_handler     1000d21d f   libvcruntime:purevirt.obj
  0001:0000c232       __purecall                 1000d232 f   libvcruntime:purevirt.obj
  0001:0000c24e       ___std_exception_copy      1000d24e f   libvcruntime:std_exception.obj
@@ -505,8 +505,8 @@
  0001:0000fbfa       __abnormal_termination     10010bfa f   libvcruntime:_exsup_.obj
  0001:0000fc20       __NLG_Notify1              10010c20 f   libvcruntime:_exsup_.obj
  0001:0000fc2c       __NLG_Notify               10010c2c f   libvcruntime:_exsup_.obj
- 0001:0000fc43       __NLG_Dispatch             10010c43     libvcruntime:_exsup_.obj
  0001:0000fc43       __NLG_Dispatch2            10010c43     libvcruntime:_exsup_.obj
+ 0001:0000fc43       __NLG_Dispatch             10010c43     libvcruntime:_exsup_.obj
  0001:0000fc4b       __NLG_Call                 10010c4b f   libvcruntime:_exsup_.obj
  0001:0000fc4d       __NLG_Return2              10010c4d     libvcruntime:_exsup_.obj
  0001:0000fc4e       _abort                     10010c4e f   libucrt:abort.obj
@@ -606,8 +606,8 @@
  0001:00013005       ??$uninitialize@A6AXAAPAPAD@Z@?$dual_state_global@PAPAD@__crt_state_management@@QAEXA6AXAAPAPAD@Z@Z 10014005 f i libucrt:environment_initialization.obj
  0001:0001307b       ___dcrt_uninitialize_environments_nolock 1001407b f   libucrt:environment_initialization.obj
  0001:000130b2       __initialize_narrow_environment 100140b2 f   libucrt:environment_initialization.obj
- 0001:00013159       ??$__crt_fast_encode_pointer@P6AHXZ@@YAP6AHXZQ6AHXZ@Z 10014159 f i libucrt:onexit.obj
  0001:00013159       ??$__crt_fast_encode_pointer@P6GHPA_WKJ@Z@@YAP6GHPA_WKJ@ZQ6GH0KJ@Z@Z 10014159 f i libucrt:winapi_thunks.obj
+ 0001:00013159       ??$__crt_fast_encode_pointer@P6AHXZ@@YAP6AHXZQ6AHXZ@Z 10014159 f i libucrt:onexit.obj
  0001:000133dd       __crt_atexit               100143dd f   libucrt:onexit.obj
  0001:000133f3       __execute_onexit_table     100143f3 f   libucrt:onexit.obj
  0001:00013422       __initialize_onexit_table  10014422 f   libucrt:onexit.obj
@@ -2428,7 +2428,7 @@
  0002:0000d14c       ??_C@_0BB@HHAFBCFN@strategyPosition@ 1003014c     api.obj
  0002:0000d160       ??_C@_0BE@HJFFIKAM@subscribeMarketData@ 10030160     api.obj
  0002:0000d174       ??_C@_0N@FFCOMJFP@targetOrders@ 10030174     api.obj
- 0002:0000d184       ??_C@_08OCKODCOI@teardown@ 10030184     api.obj
+ 0002:0000d184       ??_C@_08CDGPBNOM@tearDown@ 10030184     api.obj
  0002:0000d190       ??_C@_0BG@MOOAMIHN@unsubscribeMarketData@ 10030190     api.obj
  0002:0000d1a8       ??_C@_06HEJKKHEK@config@   100301a8     api.obj
  0002:0000d1b0       ??_C@_0BI@CFPLBAOH@invalid?5string?5position@ 100301b0     api.obj
