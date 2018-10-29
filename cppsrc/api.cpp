@@ -26,22 +26,45 @@ char* getCharFromString(string input)
 Value api::AskWrapper(const CallbackInfo& info)
 {
   Napi::Env env = info.Env();
+  size_t len = info.Length();
   
-  char* instrument = (info[0].IsString() == false ? InstrumentConfig : getCharFromString(info[0].ToString().Utf8Value()));
+  char* instrument = (len == 3 && info[0].IsString() != false ? getCharFromString(info[0].ToString().Utf8Value()) : InstrumentConfig);
+  double price = 0;
+  int size = 0;
   
-  if(info[1].IsNumber() == false) {
+  if(len == 2) {
+    if(info[0].IsNumber() != false || info[0].IsString() != false) {
+      price = info[0].ToNumber().DoubleValue();
+    }
+    else {
+      TypeError::New(env, "Price param was not passed::ask").ThrowAsJavaScriptException();
+      return env.Undefined();
+    }
+    
+    if(info[1].IsNumber() != false || info[1].IsString() != false) {
+      size = info[1].ToNumber().Int32Value();
+    }
+    else {
+      TypeError::New(env, "Size param was not passed::ask").ThrowAsJavaScriptException();
+      return env.Undefined();
+    }
+  }
+  
+  if(info[1].IsNumber() != false || info[1].IsString() != false) {
+    price = info[1].ToNumber().DoubleValue();
+  }
+  else {
     TypeError::New(env, "Price param was not passed::ask").ThrowAsJavaScriptException();
     return env.Undefined();
   }
   
-  double price = info[1].ToNumber().DoubleValue();
-  
-  if(info[2].IsNumber() == false) {
+  if(info[2].IsNumber() != false || info[2].IsString() != false) {
+    size = info[2].ToNumber().Int32Value();
+  }
+  else {
     TypeError::New(env, "Size param was not passed::ask").ThrowAsJavaScriptException();
     return env.Undefined();
   }
-  
-  int size = info[2].ToNumber().Int32Value();
   
   if(price == 0 || size == 0) {
     TypeError::New(env, "Price or Size param can not be 0::ask").ThrowAsJavaScriptException();
@@ -56,29 +79,62 @@ Value api::AskWrapper(const CallbackInfo& info)
 Value api::AskPlaybackWrapper(const CallbackInfo& info)
 {
   Napi::Env env = info.Env();
+  size_t len = info.Length();
   
-  char* instrument = (info[0].IsString() == false ? InstrumentConfig : getCharFromString(info[0].ToString().Utf8Value()));
+  char* instrument = (len == 4 && info[0].IsString() != false ? getCharFromString(info[0].ToString().Utf8Value()) : InstrumentConfig);
+  double price = 0;
+  int size = 0;
+  char* timestamp = "";
   
-  if(info[1].IsNumber() == false) {
+  if(len == 3) {
+    if(info[0].IsNumber() != false || info[0].IsString() != false) {
+      price = info[0].ToNumber().DoubleValue();
+    }
+    else {
+      TypeError::New(env, "Price param was not passed::askPlayback").ThrowAsJavaScriptException();
+      return env.Undefined();
+    }
+    
+    if(info[1].IsNumber() != false || info[1].IsString() != false) {
+      size = info[1].ToNumber().Int32Value();
+    }
+    else {
+      TypeError::New(env, "Size param was not passed::askPlayback").ThrowAsJavaScriptException();
+      return env.Undefined();
+    }
+    
+    if(info[2].IsString() != false) {
+      timestamp = getCharFromString(info[2].ToString().Utf8Value());
+    }
+    else {
+      TypeError::New(env, "Timestamp param was not passed::askPlayback").ThrowAsJavaScriptException();
+      return env.Undefined();
+    }
+  }
+  
+  if(info[1].IsNumber() != false || info[1].IsString() != false) {
+    price = info[1].ToNumber().DoubleValue();
+  }
+  else {
     TypeError::New(env, "Price param was not passed::askPlayback").ThrowAsJavaScriptException();
     return env.Undefined();
   }
-  
-  double price = info[1].ToNumber().DoubleValue();
-  
-  if(info[2].IsNumber() == false) {
+
+  if(info[2].IsNumber() != false || info[2].IsString() != false) {
+    size = info[2].ToNumber().Int32Value();
+  }
+  else {
     TypeError::New(env, "Size param was not passed::askPlayback").ThrowAsJavaScriptException();
     return env.Undefined();
   }
-  
-  int size = info[2].ToNumber().Int32Value();
-  
-  if(info[3].IsString() == false) {
+
+  if(info[3].IsString() != false) {
+    timestamp = getCharFromString(info[3].ToString().Utf8Value());
+  }
+  else {
     TypeError::New(env, "Timestamp param was not passed::askPlayback").ThrowAsJavaScriptException();
     return env.Undefined();
   }
-  
-  char* timestamp = getCharFromString(info[3].ToString().Utf8Value());
   
   if(price == 0 || size == 0) {
     TypeError::New(env, "Price or Size param can not be 0::askPlayback").ThrowAsJavaScriptException();
@@ -122,22 +178,45 @@ Value api::AvgFillPriceWrapper(const CallbackInfo& info)
 Value api::BidWrapper(const CallbackInfo& info)
 {
   Napi::Env env = info.Env();
+  size_t len = info.Length();
   
-  char* instrument = (info[0].IsString() == false ? InstrumentConfig : getCharFromString(info[0].ToString().Utf8Value()));
+  char* instrument = (len == 3 && info[0].IsString() != false ? getCharFromString(info[0].ToString().Utf8Value()) : InstrumentConfig);
+  double price = 0;
+  int size = 0;
   
-  if(info[1].IsNumber() == false) {
+  if(len == 2) {
+    if(info[0].IsNumber() != false || info[0].IsString() != false) {
+      price = info[0].ToNumber().DoubleValue();
+    }
+    else {
+      TypeError::New(env, "Price param was not passed::bid").ThrowAsJavaScriptException();
+      return env.Undefined();
+    }
+    
+    if(info[1].IsNumber() != false || info[1].IsString() != false) {
+      size = info[1].ToNumber().Int32Value();
+    }
+    else {
+      TypeError::New(env, "Size param was not passed::bid").ThrowAsJavaScriptException();
+      return env.Undefined();
+    }
+  }
+  
+  if(info[1].IsNumber() != false || info[1].IsString() != false) {
+    price = info[1].ToNumber().DoubleValue();
+  }
+  else {
     TypeError::New(env, "Price param was not passed::bid").ThrowAsJavaScriptException();
     return env.Undefined();
   }
   
-  double price = info[1].ToNumber().DoubleValue();
-  
-  if(info[2].IsNumber() == false) {
+  if(info[2].IsNumber() != false || info[2].IsString() != false) {
+    size = info[2].ToNumber().Int32Value();
+  }
+  else {
     TypeError::New(env, "Size param was not passed::bid").ThrowAsJavaScriptException();
     return env.Undefined();
   }
-  
-  int size = info[2].ToNumber().Int32Value();
   
   if(price == 0 || size == 0) {
     TypeError::New(env, "Price or Size param can not be 0::bid").ThrowAsJavaScriptException();
@@ -152,29 +231,62 @@ Value api::BidWrapper(const CallbackInfo& info)
 Value api::BidPlaybackWrapper(const CallbackInfo& info)
 {
   Napi::Env env = info.Env();
+  size_t len = info.Length();
   
-  char* instrument = (info[0].IsString() == false ? InstrumentConfig : getCharFromString(info[0].ToString().Utf8Value()));
+  char* instrument = (len == 4 && info[0].IsString() != false ? getCharFromString(info[0].ToString().Utf8Value()) : InstrumentConfig);
+  double price = 0;
+  int size = 0;
+  char* timestamp = "";
   
-  if(info[1].IsNumber() == false) {
+  if(len == 3) {
+    if(info[0].IsNumber() != false || info[0].IsString() != false) {
+      price = info[0].ToNumber().DoubleValue();
+    }
+    else {
+      TypeError::New(env, "Price param was not passed::bidPlayback").ThrowAsJavaScriptException();
+      return env.Undefined();
+    }
+    
+    if(info[1].IsNumber() != false || info[1].IsString() != false) {
+      size = info[1].ToNumber().Int32Value();
+    }
+    else {
+      TypeError::New(env, "Size param was not passed::bidPlayback").ThrowAsJavaScriptException();
+      return env.Undefined();
+    }
+    
+    if(info[2].IsString() != false) {
+      timestamp = getCharFromString(info[2].ToString().Utf8Value());
+    }
+    else {
+      TypeError::New(env, "Timestamp param was not passed::bidPlayback").ThrowAsJavaScriptException();
+      return env.Undefined();
+    }
+  }
+  
+  if(info[1].IsNumber() != false || info[1].IsString() != false) {
+    price = info[1].ToNumber().DoubleValue();
+  }
+  else {
     TypeError::New(env, "Price param was not passed::bidPlayback").ThrowAsJavaScriptException();
     return env.Undefined();
   }
-  
-  double price = info[1].ToNumber().DoubleValue();
-  
-  if(info[2].IsNumber() == false) {
+
+  if(info[2].IsNumber() != false || info[2].IsString() != false) {
+    size = info[2].ToNumber().Int32Value();
+  }
+  else {
     TypeError::New(env, "Size param was not passed::bidPlayback").ThrowAsJavaScriptException();
     return env.Undefined();
   }
-  
-  int size = info[2].ToNumber().Int32Value();
-  
-  if(info[3].IsString() == false) {
+
+  if(info[3].IsString() != false) {
+    timestamp = getCharFromString(info[3].ToString().Utf8Value());
+  }
+  else {
     TypeError::New(env, "Timestamp param was not passed::bidPlayback").ThrowAsJavaScriptException();
     return env.Undefined();
   }
-  
-  char* timestamp = getCharFromString(info[3].ToString().Utf8Value());
   
   if(price == 0 || size == 0) {
     TypeError::New(env, "Price or Size param can not be 0::bidPlayback").ThrowAsJavaScriptException();
@@ -345,22 +457,45 @@ Value api::FilledWrapper(const CallbackInfo& info)
 Value api::LastWrapper(const CallbackInfo& info)
 {
   Napi::Env env = info.Env();
+  size_t len = info.Length();
   
-  char* instrument = (info[0].IsString() == false ? InstrumentConfig : getCharFromString(info[0].ToString().Utf8Value()));
+  char* instrument = (len == 3 && info[0].IsString() != false ? getCharFromString(info[0].ToString().Utf8Value()) : InstrumentConfig);
+  double price = 0;
+  int size = 0;
   
-  if(info[1].IsNumber() == false) {
+  if(len == 2) {
+    if(info[0].IsNumber() != false || info[0].IsString() != false) {
+      price = info[0].ToNumber().DoubleValue();
+    }
+    else {
+      TypeError::New(env, "Price param was not passed::last").ThrowAsJavaScriptException();
+      return env.Undefined();
+    }
+    
+    if(info[1].IsNumber() != false || info[1].IsString() != false) {
+      size = info[1].ToNumber().Int32Value();
+    }
+    else {
+      TypeError::New(env, "Size param was not passed::last").ThrowAsJavaScriptException();
+      return env.Undefined();
+    }
+  }
+  
+  if(info[1].IsNumber() != false || info[1].IsString() != false) {
+    price = info[1].ToNumber().DoubleValue();
+  }
+  else {
     TypeError::New(env, "Price param was not passed::last").ThrowAsJavaScriptException();
     return env.Undefined();
   }
   
-  double price = info[1].ToNumber().DoubleValue();
-  
-  if(info[2].IsNumber() == false) {
+  if(info[2].IsNumber() != false || info[2].IsString() != false) {
+    size = info[2].ToNumber().Int32Value();
+  }
+  else {
     TypeError::New(env, "Size param was not passed::last").ThrowAsJavaScriptException();
     return env.Undefined();
   }
-  
-  int size = info[2].ToNumber().Int32Value();
   
   if(price == 0 || size == 0) {
     TypeError::New(env, "Price or Size param can not be 0::last").ThrowAsJavaScriptException();
@@ -375,29 +510,62 @@ Value api::LastWrapper(const CallbackInfo& info)
 Value api::LastPlaybackWrapper(const CallbackInfo& info)
 {
   Napi::Env env = info.Env();
+  size_t len = info.Length();
   
-  char* instrument = (info[0].IsString() == false ? InstrumentConfig : getCharFromString(info[0].ToString().Utf8Value()));
+  char* instrument = (len == 4 && info[0].IsString() != false ? getCharFromString(info[0].ToString().Utf8Value()) : InstrumentConfig);
+  double price = 0;
+  int size = 0;
+  char* timestamp = "";
   
-  if(info[1].IsNumber() == false) {
+  if(len == 3) {
+    if(info[0].IsNumber() != false || info[0].IsString() != false) {
+      price = info[0].ToNumber().DoubleValue();
+    }
+    else {
+      TypeError::New(env, "Price param was not passed::lastPlayback").ThrowAsJavaScriptException();
+      return env.Undefined();
+    }
+    
+    if(info[1].IsNumber() != false || info[1].IsString() != false) {
+      size = info[1].ToNumber().Int32Value();
+    }
+    else {
+      TypeError::New(env, "Size param was not passed::lastPlayback").ThrowAsJavaScriptException();
+      return env.Undefined();
+    }
+    
+    if(info[2].IsString() != false) {
+      timestamp = getCharFromString(info[2].ToString().Utf8Value());
+    }
+    else {
+      TypeError::New(env, "Timestamp param was not passed::lastPlayback").ThrowAsJavaScriptException();
+      return env.Undefined();
+    }
+  }
+  
+  if(info[1].IsNumber() != false || info[1].IsString() != false) {
+    price = info[1].ToNumber().DoubleValue();
+  }
+  else {
     TypeError::New(env, "Price param was not passed::lastPlayback").ThrowAsJavaScriptException();
     return env.Undefined();
   }
-  
-  double price = info[1].ToNumber().DoubleValue();
-  
-  if(info[2].IsNumber() == false) {
+
+  if(info[2].IsNumber() != false || info[2].IsString() != false) {
+    size = info[2].ToNumber().Int32Value();
+  }
+  else {
     TypeError::New(env, "Size param was not passed::lastPlayback").ThrowAsJavaScriptException();
     return env.Undefined();
   }
-  
-  int size = info[2].ToNumber().Int32Value();
-  
-  if(info[3].IsString() == false) {
+
+  if(info[3].IsString() != false) {
+    timestamp = getCharFromString(info[3].ToString().Utf8Value());
+  }
+  else {
     TypeError::New(env, "Timestamp param was not passed::lastPlayback").ThrowAsJavaScriptException();
     return env.Undefined();
   }
-  
-  char* timestamp = getCharFromString(info[3].ToString().Utf8Value());
   
   if(price == 0 || size == 0) {
     TypeError::New(env, "Price or Size param can not be 0::lastPlayback").ThrowAsJavaScriptException();
@@ -412,15 +580,28 @@ Value api::LastPlaybackWrapper(const CallbackInfo& info)
 Value api::MarketDataWrapper(const CallbackInfo& info)
 {
   Napi::Env env = info.Env();
+  size_t len = info.Length();
   
-  char* instrument = (info[0].IsString() == false ? InstrumentConfig : getCharFromString(info[0].ToString().Utf8Value()));
+  char* instrument = (len == 2 && info[0].IsString() != false ? getCharFromString(info[0].ToString().Utf8Value()) : InstrumentConfig);
+  int type = 0;
   
-  if(info[1].IsNumber() == false) {
+  if(len == 1) {
+    if(info[0].IsNumber() != false || info[0].IsString() != false) {
+      type = info[0].ToNumber().Int32Value();
+    }
+    else {
+      TypeError::New(env, "Type param was not passed::marketData").ThrowAsJavaScriptException();
+      return env.Undefined();
+    }
+  }
+  
+  if(info[1].IsNumber() != false || info[1].IsString() != false) {
+    type = info[1].ToNumber().Int32Value();
+  }
+  else {
     TypeError::New(env, "Type param was not passed::marketData").ThrowAsJavaScriptException();
     return env.Undefined();
   }
-  
-  int type = info[1].ToNumber().Int32Value();
   
   double returnValue = MarketData(instrument, type);
   
