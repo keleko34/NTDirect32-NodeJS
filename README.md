@@ -29,13 +29,12 @@ Installation
 This libray can be installed using:
 
  * [NPM](https://www.npmjs.com) :  `npm install ntdirect32 --save`
- * [Yarn](https://yarnpkg.com/lang/en/docs/install) : `yarn add ntdirect32`
  
 Getting started
 ============
 This script can be loaded using Nodes require method
 ```
- var NTDirect = require("NTDirect");
+ var NTDirect = require("ntdirect32");
 ```
 
 Config
@@ -153,7 +152,7 @@ If You would like to contribute here are the steps
 
 1. Clone Repo: [NTDirect32 Github Repo](https://github.com/keleko34/NTDirect32-NodeJS)
 2. Install any necessary dev dependencies `npm i`
-3. build the project `npm run build` or for debug `npm run build:dev`
+3. build the project `npm run rebuild` or for debug `npm run rebuild:dev`
 4. test your changes don't break anything
 5. Make a pull request on github for your changes
 
