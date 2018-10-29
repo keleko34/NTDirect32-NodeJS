@@ -2,6 +2,7 @@
 > NodeJS Wrapper for the Ninja Trader 7 NtDirect.dll api
 
 ![][warning] This is a 32-bit windows only module, due to dll supporting only 32-bit
+
 ![][warning] You must install Ninja trader 7 in order to use this module (also must be running for interaction)
 
 [![NPM version][npm-image]][npm-url]
