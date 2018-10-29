@@ -125,13 +125,18 @@ NTDirect32.unsubscribeMarketData = function(instrument)
 }
 
 process.on('exit', NTDirect32.tearDown);
-process.on('uncaughtException', process.exit);
+process.on('uncaughtException', function(err){
+  console.error(err);
+  return process.exit(0);
+});
 
 /* load local config if it exists */
-var base = process.cwd().replace(/\\/,'/'),
+var base = process.cwd().replace(/\\/g,'/'),
     file = base+"/config.json",
     encoding = {encoding: 'utf8'};
 
-if(fs.statSync(file)) NTDirect32.config(JSON.parse(fs.readFileSync(file, encoding)));
+try {
+  if(fs.statSync(file).isFile()) NTDirect32.config(JSON.parse(fs.readFileSync(file, encoding)));
+} catch(e){}
 
 module.exports = NTDirect32;
