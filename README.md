@@ -21,7 +21,8 @@ Table of contents
 
 What is it?
 ==========
-This library allows you to interact with the Ninja trader 7 application using the NtDirect.dll provided api
+This library allows you to interact with the Ninja trader 7 application using the NtDirect.dll provided api.
+You can view more details on this dll library in the Ninja Trader documentations: [Documentation](https://ninjatrader.com/support/helpGuides/nt7/?automated_trading_interface_at.htm)
 
 Installation
 ============
@@ -134,8 +135,8 @@ Gets an array of strategy ID's of all ATM Strategies of an account. Duplicate ID
 #### strategyPosition (strategy id (string))
 Gets the position for a strategy. Returns flat, short, or long.
 
-#### subscribeMarketData (instrument (string)(optional))
-Starts a market data stream for the specific instrument. Call the MarketData() function to retrieve prices. Make sure you call the UnSubscribeMarketData() function to close the data stream. A return value of 1 indicates success and 0 indicates an error. subscribeMarketData is also called when the instrument config default is set.
+#### subscribeMarketData (instrument ((string)|(array[string]))(optional))
+Starts a market data stream for the specific instrument or instruments. Call the MarketData() function to retrieve prices. Make sure you call the UnSubscribeMarketData() function to close the data stream. A return value of 1 indicates success and 0 indicates an error. subscribeMarketData is also called when the instrument config default is set.
 
 #### targetOrders (strategy id (string))
 Gets an array of order ID's of all Profit Target orders of an ATM Strategy. Internal token ID value is used since it is guaranteed to be unique.
@@ -143,8 +144,8 @@ Gets an array of order ID's of all Profit Target orders of an ATM Strategy. Inte
 #### tearDown ()
 Disconnects the DLL from the NinjaTrader server. A return value of 1 indicates success and 0 indicates an error. This automatically happens when node crashes or exits.
 
-#### unsubscribeMarketData(instrument (string)(optional))
-Stops a market data stream for the specific instrument. A return value of 1 indicates success and 0 indicates an error. unsubscribeMarketData is also called when the instrument config changes the default instrument.
+#### unsubscribeMarketData(instrument ((string)|(array[string]))(optional))
+Stops a market data stream for the specific instrument or instruments. A return value of 1 indicates success and 0 indicates an error. unsubscribeMarketData is also called when the instrument config changes the default instrument.
 
 How to contribute
 ============

@@ -11,7 +11,9 @@ var askPlayback = NTDirect32.askPlayback,
     marketData = NTDirect32.marketData,
     stopOrders = NTDirect32.stopOrders,
     strategies = NTDirect32.strategies,
-    targetOrders = NTDirect32.targetOrders;
+    targetOrders = NTDirect32.targetOrders,
+    subscribeMarketData = NTDirect32.subscribeMarketData,
+    unsubscribeMarketData = NTDirect32.unsubscribeMarketData;
 
 NTDirect32.askPlayback = function()
 {
@@ -77,6 +79,50 @@ NTDirect32.marketData = function()
 NTDirect32.stopOrders = function(){ return stopOrders.apply(this, arguments).split("|"); }
 NTDirect32.strategies = function(){ return strategies.apply(this, arguments).split("|"); }
 NTDirect32.targetOrders = function(){ return targetOrders.apply(this, arguments).split("|"); }
+
+NTDirect32.subscribeMarketData = function(instrument)
+{
+  if(instrument && typeof instrument == 'object' && instrument.length)
+  {
+    var success = [],
+        x = 0,
+        len = instrument.length,
+        index;
+    for(x;x<len;x++)
+    {
+      success.push(subscribeMarketData.call(this, instrument[x]));
+    }
+    index = success.indexOf(0);
+    if(index !== -1) {
+      console.error(new Error("There was an issue subscribing:" + instrument[index] + "::subscribeMarketData"));
+      return 0;
+    }
+    return 1;
+  }
+  return subscribeMarketData.call(this, instrument);
+}
+
+NTDirect32.unsubscribeMarketData = function(instrument)
+{
+  if(instrument && typeof instrument == 'object' && instrument.length)
+  {
+    var success = [],
+        x = 0,
+        len = instrument.length,
+        index;
+    for(x;x<len;x++)
+    {
+      success.push(unsubscribeMarketData.call(this, instrument[x]));
+    }
+    index = success.indexOf(0);
+    if(index !== -1) {
+      console.error(new Error("There was an issue unsubscribing:" + instrument[index] + "::unsubscribeMarketData"));
+      return 0;
+    }
+    return 1;
+  }
+  return unsubscribeMarketData.call(this, instrument);
+}
 
 process.on('exit', NTDirect32.tearDown);
 process.on('uncaughtException', process.exit);
