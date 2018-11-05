@@ -2,6 +2,12 @@
   "name": "ntdirect32",
   "version": "1.1.2",
   "description": "a nodejs wrapper for the Ninja Trader NtDirect dll",
+  "homepage": "https://github.com/keleko34/NTDirect32-NodeJS",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/keleko34/NTDirect32-NodeJS.git"
+  },
+  "os": [ "win32" ],
   "main": "init.js",
   "gypfile": true,
   "scripts": {
@@ -13,6 +19,7 @@
     "clean": "node-gyp clean configure --nodedir=\"D:/dev/node\""
   },
   "keywords": [
+    "ninja trader 7",
     "ninja",
     "trader",
     "ntdirect",
