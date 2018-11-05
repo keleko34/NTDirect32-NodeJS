@@ -7,9 +7,6 @@
     "type": "git",
     "url": "https://github.com/keleko34/NTDirect32-NodeJS.git"
   },
-  "os": [
-    "win32"
-  ],
   "main": "init.js",
   "gypfile": true,
   "scripts": {
