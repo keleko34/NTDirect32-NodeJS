@@ -1,6 +1,6 @@
 {
   "name": "ntdirect32",
-  "version": "1.1.4",
+  "version": "1.1.5",
   "description": "a nodejs wrapper for the Ninja Trader NtDirect dll",
   "homepage": "https://github.com/keleko34/NTDirect32-NodeJS",
   "repository": {
