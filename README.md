@@ -28,8 +28,7 @@ Installation
 ============
 This libray can be installed using:
 
- * [NODE-GYP](https://github.com/nodejs/node-gyp) : `npm install -g node-gyp`
- * [NODE-PRE-GYP](https://www.npmjs.com/package/node-pre-gyp) : `npm install -g node-pre-gyp`
+ * [NODE-GYP (Read installation instructions for your platform)](https://github.com/nodejs/node-gyp) : `npm install -g node-gyp`
  * [NPM](https://www.npmjs.com) :  `npm install ntdirect32 --save`
  
 Extra:

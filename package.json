@@ -18,7 +18,7 @@
   },
   "scripts": {
     "start": "node init.js",
-    "install": "node-pre-gyp install --fallback-to-build --target_arch=ia32",
+    "install": "node ./node_modules/node-pre-gyp/bin/node-pre-gyp install --fallback-to-build --target_arch=ia32",
     "configure": "node-pre-gyp clean && node-pre-gyp configure --target_arch=ia32",
     "build:nw-dev": "node-pre-gyp build --runtime=node-webkit --target=0.34.1 --target_arch=ia32 --debug",
     "build:nw": "node-pre-gyp build --runtime=node-webkit --target=0.34.1 --target_arch=ia32",
