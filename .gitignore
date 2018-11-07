@@ -39,8 +39,19 @@ bower_components
 
 # Compiled binary addons (https://nodejs.org/api/addons.html)
 build/
-Release/
-stage/
+build/Release/
+build/Debug/
+build/stage/
+
+build/Release/NTDirect32.iobj
+build/Release/NTDirect32.ipdb
+build/Release/NTDirect32.map
+build/Release/NTDirect32.node
+build/Release/NTDirect32.pdb
+build/Release/nothing.lib
+build/Release/obj/NTDirect32/api.obj
+build/Release/obj/NTDirect32/main.obj
+build/Release/obj/NTDirect32/win_delay_load_hook.obj
 
 # Dependency directories
 node_modules/
