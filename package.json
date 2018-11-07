@@ -9,13 +9,26 @@
   },
   "main": "init.js",
   "gypfile": true,
+  "binary": {
+    "module_name": "ntdirect32",
+    "module_path": "./build/Release",
+    "host": "https://github.com/keleko34/NTDirect32-NodeJS/releases/download/",
+    "remote_path": "{version}"
+  },
   "scripts": {
     "start": "node init.js",
-    "build:dev": "node-gyp -j 16 --arch=ia32 build --debug",
-    "build": "node-gyp -j 16 --arch=ia32 build",
-    "rebuild:dev": "node-gyp -j 16 --arch=ia32 rebuild --debug",
-    "rebuild": "node-gyp -j 16 --arch=ia32 rebuild",
-    "clean": "node-gyp clean configure --nodedir=\"D:/dev/node\""
+    "install": "node-pre-gyp install --fallback-to-build",
+    "configure": "node-pre-gyp clean && node-pre-gyp configure --target_arch=ia32",
+    "build:nw-dev": "node-pre-gyp build --runtime=node-webkit --target=0.34.1 --target_arch=ia32 --debug",
+    "build:nw": "node-pre-gyp build --runtime=node-webkit --target=0.34.1 --target_arch=ia32",
+    "build:dev": "node-pre-gyp build --target_arch=ia32 --debug",
+    "build": "node-pre-gyp build --target_arch=ia32",
+    "rebuild:nw-dev": "node-pre-gyp build --runtime=node-webkit --target=0.34.1 --target_arch=ia32 --debug",
+    "rebuild:nw": "node-pre-gyp build --runtime=node-webkit --target=0.34.1 --target_arch=ia32",
+    "rebuild:dev": "node-pre-gyp rebuild --target_arch=ia32 --debug",
+    "rebuild": "node-pre-gyp rebuild --target_arch=ia32",
+    "publish:dev": "node-pre-gyp package && node-pre-gyp-github publish",
+    "publish": "node-pre-gyp package && node-pre-gyp-github publish --release"
   },
   "keywords": [
     "ninja trader 7",
@@ -26,11 +39,9 @@
   ],
   "author": "keleko34",
   "license": "MIT",
-  "devDependencies": {
-    "node-gyp": "^3.8.0"
-  },
   "dependencies": {
-    "node-addon-api": "^1.5.0"
+    "node-addon-api": "^1.5.0",
+    "node-pre-gyp": "^0.11.0"
   },
   "eslintConfig": {
     "env": {

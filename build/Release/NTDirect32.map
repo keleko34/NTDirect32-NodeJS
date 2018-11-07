@@ -1,6 +1,6 @@
  NTDirect32
 
- Timestamp is 5bd742d3 (Mon Oct 29 18:26:43 2018)
+ Timestamp is 5be2f07f (Wed Nov  7 15:02:39 2018)
 
  Preferred load address is 10000000
 
@@ -25,22 +25,22 @@
  0002:000001d0 000056b0H .rdata                  DATA
  0002:00005880 00000220H .rdata$r                DATA
  0002:00005aa0 0000001cH .rdata$sxdata           DATA
- 0002:00005abc 00000398H .rdata$zzzdbg           DATA
- 0002:00005e54 00000004H .rtc$IAA                DATA
- 0002:00005e58 00000004H .rtc$IZZ                DATA
- 0002:00005e5c 00000004H .rtc$TAA                DATA
- 0002:00005e60 00000008H .rtc$TZZ                DATA
- 0002:00005e68 000005ecH .xdata$x                DATA
- 0002:00006454 00000020H .didat$2                DATA
- 0002:00006474 00000020H .didat$3                DATA
- 0002:00006494 00000080H .didat$4                DATA
- 0002:00006514 000002f0H .didat$6                DATA
- 0002:00006804 0000008cH .didat$7                DATA
- 0002:00006890 00000058H .edata                  DATA
- 0002:000068e8 00000028H .idata$2                DATA
- 0002:00006910 00000014H .idata$3                DATA
- 0002:00006924 0000018cH .idata$4                DATA
- 0002:00006ab0 00000524H .idata$6                DATA
+ 0002:00005abc 00000394H .rdata$zzzdbg           DATA
+ 0002:00005e50 00000004H .rtc$IAA                DATA
+ 0002:00005e54 00000004H .rtc$IZZ                DATA
+ 0002:00005e58 00000004H .rtc$TAA                DATA
+ 0002:00005e5c 00000004H .rtc$TZZ                DATA
+ 0002:00005e60 000005ecH .xdata$x                DATA
+ 0002:0000644c 00000020H .didat$2                DATA
+ 0002:0000646c 00000020H .didat$3                DATA
+ 0002:0000648c 00000080H .didat$4                DATA
+ 0002:0000650c 000002f0H .didat$6                DATA
+ 0002:000067fc 00000084H .didat$7                DATA
+ 0002:00006880 00000058H .edata                  DATA
+ 0002:000068d8 00000028H .idata$2                DATA
+ 0002:00006900 00000014H .idata$3                DATA
+ 0002:00006914 0000018cH .idata$4                DATA
+ 0002:00006aa0 00000524H .idata$6                DATA
  0003:00000000 00000798H .data                   DATA
  0003:00000798 000000d8H .data$r                 DATA
  0003:00000870 00000080H .didat$5                DATA
@@ -168,21 +168,21 @@
  0001:0000a24c       ??0length_error@std@@QAE@PBD@Z 1000b24c f i libcpmt:xthrow.obj
  0001:0000a26b       ??0logic_error@std@@QAE@ABV01@@Z 1000b26b f i libcpmt:xthrow.obj
  0001:0000a286       ??1bad_alloc@std@@UAE@XZ   1000b286 f i libcpmt:xthrow.obj
- 0001:0000a286       ??1length_error@std@@UAE@XZ 1000b286 f i libcpmt:xthrow.obj
  0001:0000a286       ??1bad_array_new_length@std@@UAE@XZ 1000b286 f i LIBCMT:throw_bad_alloc.obj
  0001:0000a286       ??1bad_exception@std@@UAE@XZ 1000b286 f i libvcruntime:frame.obj
- 0001:0000a297       ??_Gbad_exception@std@@UAEPAXI@Z 1000b297 f i libvcruntime:frame.obj
- 0001:0000a297       ??_Glogic_error@std@@UAEPAXI@Z 1000b297 f i libcpmt:xthrow.obj
- 0001:0000a297       ??_Eexception@std@@UAEPAXI@Z 1000b297 f i libcpmt:xthrow.obj
- 0001:0000a297       ??_Elogic_error@std@@UAEPAXI@Z 1000b297 f i libcpmt:xthrow.obj
+ 0001:0000a286       ??1length_error@std@@UAE@XZ 1000b286 f i libcpmt:xthrow.obj
  0001:0000a297       ??_Ebad_exception@std@@UAEPAXI@Z 1000b297 f i libvcruntime:frame.obj
- 0001:0000a297       ??_Glength_error@std@@UAEPAXI@Z 1000b297 f i libcpmt:xthrow.obj
- 0001:0000a297       ??_Ebad_array_new_length@std@@UAEPAXI@Z 1000b297 f i LIBCMT:throw_bad_alloc.obj
+ 0001:0000a297       ??_Gbad_exception@std@@UAEPAXI@Z 1000b297 f i libvcruntime:frame.obj
  0001:0000a297       ??_Ebad_alloc@std@@UAEPAXI@Z 1000b297 f i libcpmt:xthrow.obj
- 0001:0000a297       ??_Gexception@std@@UAEPAXI@Z 1000b297 f i libcpmt:xthrow.obj
+ 0001:0000a297       ??_Gbad_array_new_length@std@@UAEPAXI@Z 1000b297 f i LIBCMT:throw_bad_alloc.obj
  0001:0000a297       ??_Gbad_alloc@std@@UAEPAXI@Z 1000b297 f i libcpmt:xthrow.obj
  0001:0000a297       ??_Elength_error@std@@UAEPAXI@Z 1000b297 f i libcpmt:xthrow.obj
- 0001:0000a297       ??_Gbad_array_new_length@std@@UAEPAXI@Z 1000b297 f i LIBCMT:throw_bad_alloc.obj
+ 0001:0000a297       ??_Glength_error@std@@UAEPAXI@Z 1000b297 f i libcpmt:xthrow.obj
+ 0001:0000a297       ??_Ebad_array_new_length@std@@UAEPAXI@Z 1000b297 f i LIBCMT:throw_bad_alloc.obj
+ 0001:0000a297       ??_Eexception@std@@UAEPAXI@Z 1000b297 f i libcpmt:xthrow.obj
+ 0001:0000a297       ??_Gexception@std@@UAEPAXI@Z 1000b297 f i libcpmt:xthrow.obj
+ 0001:0000a297       ??_Elogic_error@std@@UAEPAXI@Z 1000b297 f i libcpmt:xthrow.obj
+ 0001:0000a297       ??_Glogic_error@std@@UAEPAXI@Z 1000b297 f i libcpmt:xthrow.obj
  0001:0000a2c4       ?_Xlength_error@std@@YAXPBD@Z 1000b2c4 f   libcpmt:xthrow.obj
  0001:0000a2e4       ?what@exception@std@@UBEPBDXZ 1000b2e4 f i libcpmt:xthrow.obj
  0001:0000a2f1       @__security_check_cookie@4 1000b2f1 f   LIBCMT:_secchk_.obj
@@ -191,8 +191,8 @@
  0001:0000a337       ??3@YAXPAXI@Z              1000b337 f   LIBCMT:delete_scalar_size.obj
  0001:0000a345       ??_U@YAPAXI@Z              1000b345 f   LIBCMT:new_array.obj
  0001:0000a66e       __DllMainCRTStartup@12     1000b66e f   LIBCMT:dll_dllmain.obj
- 0001:0000a691       ??_Etype_info@@UAEPAXI@Z   1000b691 f i LIBCMT:std_type_info_static.obj
  0001:0000a691       ??_Gtype_info@@UAEPAXI@Z   1000b691 f i LIBCMT:std_type_info_static.obj
+ 0001:0000a691       ??_Etype_info@@UAEPAXI@Z   1000b691 f i LIBCMT:std_type_info_static.obj
  0001:0000a6b4       ___raise_securityfailure   1000b6b4 f   LIBCMT:gs_report.obj
  0001:0000a6dc       ___report_gsfailure        1000b6dc f   LIBCMT:gs_report.obj
  0001:0000a7d5       ??3@YAXPAX@Z               1000b7d5 f   LIBCMT:delete_scalar.obj
@@ -273,8 +273,8 @@
  0001:0000bbaa       __abnormal_termination     1000cbaa f   libvcruntime:_exsup_.obj
  0001:0000bbd0       __NLG_Notify1              1000cbd0 f   libvcruntime:_exsup_.obj
  0001:0000bbdc       __NLG_Notify               1000cbdc f   libvcruntime:_exsup_.obj
- 0001:0000bbf3       __NLG_Dispatch             1000cbf3     libvcruntime:_exsup_.obj
  0001:0000bbf3       __NLG_Dispatch2            1000cbf3     libvcruntime:_exsup_.obj
+ 0001:0000bbf3       __NLG_Dispatch             1000cbf3     libvcruntime:_exsup_.obj
  0001:0000bbfb       __NLG_Call                 1000cbfb f   libvcruntime:_exsup_.obj
  0001:0000bbfd       __NLG_Return2              1000cbfd     libvcruntime:_exsup_.obj
  0001:0000bbfe       ?GetRangeOfTrysToCheck@__FrameHandler3@@SA?AU?$pair@Viterator@TryBlockMap@__FrameHandler3@@V123@@std@@AAVTryBlockMap@1@HH@Z 1000cbfe f   libvcruntime:trnsctrl.obj
@@ -335,8 +335,8 @@
  0001:0000e2eb       __is_c_termination_complete 1000f2eb f   libucrt:exit.obj
  0001:0000e5a2       ___acrt_allocate_buffer_for_argv 1000f5a2 f   libucrt:argv_parsing.obj
  0001:0000e5f1       __configure_narrow_argv    1000f5f1 f   libucrt:argv_parsing.obj
- 0001:0000e750       ??$uninitialize@A6AXAAPAPAD@Z@?$dual_state_global@PAPAD@__crt_state_management@@QAEXA6AXAAPAPAD@Z@Z 1000f750 f i libucrt:environment_initialization.obj
  0001:0000e750       ??$uninitialize@A6AXAAPAPA_W@Z@?$dual_state_global@PAPA_W@__crt_state_management@@QAEXA6AXAAPAPA_W@Z@Z 1000f750 f i libucrt:environment_initialization.obj
+ 0001:0000e750       ??$uninitialize@A6AXAAPAPAD@Z@?$dual_state_global@PAPAD@__crt_state_management@@QAEXA6AXAAPAPAD@Z@Z 1000f750 f i libucrt:environment_initialization.obj
  0001:0000e7c6       ___dcrt_uninitialize_environments_nolock 1000f7c6 f   libucrt:environment_initialization.obj
  0001:0000e7fd       __initialize_narrow_environment 1000f7fd f   libucrt:environment_initialization.obj
  0001:0000e977       __execute_onexit_table     1000f977 f   libucrt:onexit.obj
@@ -723,8 +723,8 @@
  0002:00000208       ??_C@_0P@GHFPNOJB@bad?5allocation@ 10019208     libcpmt:xthrow.obj
  0002:0000021c       ??_7logic_error@std@@6B@   1001921c     libcpmt:xthrow.obj
  0002:00000228       ??_7length_error@std@@6B@  10019228     libcpmt:xthrow.obj
- 0002:00000230       __pDefaultRawDllMain       10019230     LIBCMT:dll_dllmain.obj
  0002:00000230       __pRawDllMain              10019230     LIBCMT:dll_dllmain.obj
+ 0002:00000230       __pDefaultRawDllMain       10019230     LIBCMT:dll_dllmain.obj
  0002:00000238       ??_7type_info@@6B@         10019238     LIBCMT:std_type_info_static.obj
  0002:00000248       ??_7bad_array_new_length@std@@6B@ 10019248     LIBCMT:throw_bad_alloc.obj
  0002:00000250       ??_C@_0BF@KINCDENJ@bad?5array?5new?5length@ 10019250     LIBCMT:throw_bad_alloc.obj
@@ -1407,115 +1407,115 @@
  0002:00004c1c       ??_C@_0BI@HMIEPCNJ@ReleaseSRWLockExclusive@ 1001dc1c     DelayImp:delayhlp.obj
  0002:00004c34       ___pfnDliFailureHook2      1001dc34     DelayImp:delayhk1.obj
  0002:00004c38       __load_config_used         1001dc38     LIBCMT:loadcfg.obj
- 0002:00004cd8       ??_C@_0DI@IJOJONHO@d?3?2dev?2nodeaddons?2ntdirect32?2nt@ 1001dcd8     main.obj
- 0002:00004d10       ??_C@_0L@DODPNJFG@NTDirect32@ 1001dd10     main.obj
- 0002:00004d1b       ??_C@_00CNPNBAHC@@         1001dd1b     api.obj
- 0002:00004d1c       ??_C@_0BJ@GLEIFKFN@napi_get_last_error_info@ 1001dd1c     api.obj
- 0002:00004d38       ??_C@_0L@HGGLHLEF@Error?3?3New@ 1001dd38     api.obj
- 0002:00004d44       ??_C@_0CC@POCGFFOK@napi_get_and_clear_last_excepti@ 1001dd44     api.obj
- 0002:00004d68       ??_C@_0BJ@JAPLLJGC@Error?5in?5native?5callback@ 1001dd68     api.obj
- 0002:00004d84       ??_C@_0BK@JOKHAPGN@napi_is_exception_pending@ 1001dd84     api.obj
- 0002:00004da0       ??_C@_0BI@LICPADOD@napi_create_string_utf8@ 1001dda0     api.obj
- 0002:00004db8       ??_C@_0BC@MIFMGDHH@napi_create_error@ 1001ddb8     api.obj
- 0002:00004dcc       ??_C@_0BG@LGKKPCKG@napi_create_reference@ 1001ddcc     api.obj
- 0002:00004de4       ??_C@_0N@JLICLJJF@Error?3?3Error@ 1001dde4     api.obj
- 0002:00004df4       ??_C@_09IPAEKDAI@localhost@ 1001ddf4     api.obj
- 0002:00004e00       ??_C@_0CA@KMHKOLGC@Price?5param?5was?5not?5passed?3?3ask@ 1001de00     api.obj
- 0002:00004e20       ??_C@_0BP@PGDNKCAB@Size?5param?5was?5not?5passed?3?3ask@ 1001de20     api.obj
- 0002:00004e40       ??_C@_0CG@IKMFALKC@Price?5or?5Size?5param?5can?5not?5be?5@ 1001de40     api.obj
- 0002:00004e68       ??_C@_0CI@NEANJFJP@Price?5param?5was?5not?5passed?3?3ask@ 1001de68     api.obj
- 0002:00004e90       ??_C@_0CH@DLAEOPND@Size?5param?5was?5not?5passed?3?3askP@ 1001de90     api.obj
- 0002:00004eb8       ??_C@_0CM@CMMBBIIF@Timestamp?5param?5was?5not?5passed?3@ 1001deb8     api.obj
- 0002:00004ee4       ??_C@_0CO@IBGAPLL@Price?5or?5Size?5param?5can?5not?5be?5@ 1001dee4     api.obj
- 0002:00004f14       ??_C@_0CL@IKNMFANP@OrderId?5param?5was?5not?5passed?3?3a@ 1001df14     api.obj
- 0002:00004f40       ??_C@_0CA@CIOGHOOF@Price?5param?5was?5not?5passed?3?3bid@ 1001df40     api.obj
- 0002:00004f60       ??_C@_0BP@HCKBDHIG@Size?5param?5was?5not?5passed?3?3bid@ 1001df60     api.obj
- 0002:00004f80       ??_C@_0CG@OFJJOCF@Price?5or?5Size?5param?5can?5not?5be?5@ 1001df80     api.obj
- 0002:00004fa8       ??_C@_0CI@BOMBIAKN@Price?5param?5was?5not?5passed?3?3bid@ 1001dfa8     api.obj
- 0002:00004fd0       ??_C@_0CH@PBMIPKOB@Size?5param?5was?5not?5passed?3?3bidP@ 1001dfd0     api.obj
- 0002:00004ff8       ??_C@_0CM@OGANANLH@Timestamp?5param?5was?5not?5passed?3@ 1001dff8     api.obj
- 0002:00005024       ??_C@_0CO@MCNKBKIJ@Price?5or?5Size?5param?5can?5not?5be?5@ 1001e024     api.obj
- 0002:00005058       ??_C@_0EM@PDFPIPFA@CommandName?5param?5was?5not?5passe@ 1001e058     api.obj
- 0002:000050a4       ??_C@_0BA@KCPLAHGH@CANCELALLORDERS@ 1001e0a4     api.obj
- 0002:000050b4       ??_C@_0BC@NNANHPPL@FLATTENEVERYTHING@ 1001e0b4     api.obj
- 0002:000050c8       ??_C@_0O@HKJLDOIG@CLOSESTRATEGY@ 1001e0c8     api.obj
- 0002:000050d8       ??_C@_0DI@BMLOGBMI@Strategy?5ID?5param?5was?5not?5passe@ 1001e0d8     api.obj
- 0002:00005110       ??_C@_0O@GJKFMMHB@CLOSEPOSITION@ 1001e110     api.obj
- 0002:00005120       ??_C@_06JHILMIHF@CANCEL@   1001e120     api.obj
- 0002:00005128       ??_C@_0CO@PLLHMOPP@Order?5ID?5param?5was?5not?5passed?3C@ 1001e128     api.obj
- 0002:00005158       ??_C@_06BCPILJJG@CHANGE@   1001e158     api.obj
- 0002:00005160       ??_C@_0CO@LALKNAC@Order?5ID?5param?5was?5not?5passed?3C@ 1001e160     api.obj
- 0002:00005190       ??_C@_0EA@EEMDFHFL@CommandName?5param?5was?5not?5passe@ 1001e190     api.obj
- 0002:000051d0       ??_C@_0BA@BFBDGCOJ@REVERSEPOSITION@ 1001e1d0     api.obj
- 0002:000051e0       ??_C@_0DM@BBEBGKED@Account?5param?5was?5not?5passed?3PL@ 1001e1e0     api.obj
- 0002:0000521c       ??_C@_0DP@MGHHAGDK@Instrument?5param?5was?5not?5passed@ 1001e21c     api.obj
- 0002:0000525c       ??_C@_0DL@PACONCDE@Action?5param?5was?5not?5passed?3PLA@ 1001e25c     api.obj
- 0002:00005298       ??_C@_0DI@CKJAKIFF@Qty?5param?5was?5not?5passed?3PLACE?$HM@ 1001e298     api.obj
- 0002:000052d0       ??_C@_0DP@FFDGLBB@Order?5type?5param?5was?5not?5passed@ 1001e2d0     api.obj
- 0002:00005310       ??_C@_0DI@NBHCOFBI@TIF?5param?5was?5not?5passed?3PLACE?$HM@ 1001e310     api.obj
- 0002:00005348       ??_C@_0CI@EBIIEJIH@OrderId?5param?5was?5not?5passed?3?3c@ 1001e348     api.obj
- 0002:00005370       ??_C@_0CB@PIPGGPAA@Price?5param?5was?5not?5passed?3?3las@ 1001e370     api.obj
- 0002:00005394       ??_C@_0CA@CMBHBIKL@Size?5param?5was?5not?5passed?3?3last@ 1001e394     api.obj
- 0002:000053b4       ??_C@_0CH@GDLEBCFA@Price?5or?5Size?5param?5can?5not?5be?5@ 1001e3b4     api.obj
- 0002:000053dc       ??_C@_0CJ@JOHLEBBA@Price?5param?5was?5not?5passed?3?3las@ 1001e3dc     api.obj
- 0002:00005408       ??_C@_0CI@OBPOEFNB@Size?5param?5was?5not?5passed?3?3last@ 1001e408     api.obj
- 0002:00005430       ??_C@_0CN@GDOBHEOH@Timestamp?5param?5was?5not?5passed?3@ 1001e430     api.obj
- 0002:00005460       ??_C@_0CP@KCKELOFL@Price?5or?5Size?5param?5can?5not?5be?5@ 1001e460     api.obj
- 0002:00005490       ??_C@_0CG@BBCCGCAM@Type?5param?5was?5not?5passed?3?3mark@ 1001e490     api.obj
- 0002:000054b8       ??_C@_05BFKKPKCG@short@    1001e4b8     api.obj
- 0002:000054c0       ??_C@_04FMBJNPFB@flat@     1001e4c0     api.obj
- 0002:000054c8       ??_C@_04GOKPGOLB@long@     1001e4c8     api.obj
- 0002:000054d0       ??_C@_0CL@DCEGLPGF@Order?5Id?5param?5was?5not?5passed?3?3@ 1001e4d0     api.obj
- 0002:000054fc       ??_C@_0CN@GGPGCMBG@Strategy?5ID?5param?5was?5not?5passe@ 1001e4fc     api.obj
- 0002:0000552c       ??_C@_0DD@MGJJJCHM@Strategy?5ID?5param?5was?5not?5passe@ 1001e52c     api.obj
- 0002:00005560       ??_C@_0CP@KMPEJCLO@Strategy?5ID?5param?5was?5not?5passe@ 1001e560     api.obj
- 0002:00005590       ??_C@_0CE@EINHMEFD@config?5param?5was?5not?5passed?3?3co@ 1001e590     api.obj
- 0002:000055b4       ??_C@_04OODOLJMA@host@     1001e5b4     api.obj
- 0002:000055bc       ??_C@_04LPGMAPLE@port@     1001e5bc     api.obj
- 0002:000055c4       ??_C@_07PMDLEBNF@account@  1001e5c4     api.obj
- 0002:000055cc       ??_C@_0L@NFKDABHC@instrument@ 1001e5cc     api.obj
- 0002:000055d8       ??_C@_03INJPNEOA@ask@      1001e5d8     api.obj
- 0002:000055dc       ??_C@_0M@CBBAEOAG@askPlayback@ 1001e5dc     api.obj
- 0002:000055e8       ??_C@_0O@LABPDHFB@avgEntryPrice@ 1001e5e8     api.obj
- 0002:000055f8       ??_C@_0N@KCOJCHDO@avgFillPrice@ 1001e5f8     api.obj
- 0002:00005608       ??_C@_03JADEBGH@bid@       1001e608     api.obj
- 0002:0000560c       ??_C@_0M@OLNMFLDE@bidPlayback@ 1001e60c     api.obj
- 0002:00005618       ??_C@_0M@MMLAOAI@buyingPower@ 1001e618     api.obj
- 0002:00005624       ??_C@_09LCPOOBBJ@cashValue@ 1001e624     api.obj
- 0002:00005630       ??_C@_0BA@GNKHCCDN@cancelAllOrders@ 1001e630     api.obj
- 0002:00005640       ??_C@_0BC@GHMIGFPA@flattenEverything@ 1001e640     api.obj
- 0002:00005654       ??_C@_0O@CICMOGNA@closeStrategy@ 1001e654     api.obj
- 0002:00005664       ??_C@_0O@DLBCBECH@closePosition@ 1001e664     api.obj
- 0002:00005674       ??_C@_0M@KOCMLGIB@cancelOrder@ 1001e674     api.obj
- 0002:00005680       ??_C@_0M@CJIHGHA@changeOrder@ 1001e680     api.obj
- 0002:0000568c       ??_C@_0O@OKAEBBMC@placeBuyOrder@ 1001e68c     api.obj
- 0002:0000569c       ??_C@_0P@DALKKMNB@placeSellOrder@ 1001e69c     api.obj
- 0002:000056ac       ??_C@_0BD@KDDGKPJP@reverseBuyPosition@ 1001e6ac     api.obj
- 0002:000056c0       ??_C@_0BE@EJCJPJLF@reverseSellPosition@ 1001e6c0     api.obj
- 0002:000056d4       ??_C@_0O@PBLEFIKC@confirmOrders@ 1001e6d4     api.obj
- 0002:000056e4       ??_C@_09JGOMOAGJ@connected@ 1001e6e4     api.obj
- 0002:000056f0       ??_C@_06MHLBHCFD@filled@   1001e6f0     api.obj
- 0002:000056f8       ??_C@_04PLGBGIDD@last@     1001e6f8     api.obj
- 0002:00005700       ??_C@_0N@BHFNHHCL@lastPlayback@ 1001e700     api.obj
- 0002:00005710       ??_C@_0L@CKADHFMM@marketData@ 1001e710     api.obj
- 0002:0000571c       ??_C@_0P@KBOMOIAO@marketPosition@ 1001e71c     api.obj
- 0002:0000572c       ??_C@_0O@CCOHPHBP@getNewOrderId@ 1001e72c     api.obj
- 0002:0000573c       ??_C@_0M@MMIGICJC@orderStatus@ 1001e73c     api.obj
- 0002:00005748       ??_C@_0M@IPBFJDGP@realizedPnL@ 1001e748     api.obj
- 0002:00005754       ??_C@_05DDEMHLGI@setUp@    1001e754     api.obj
- 0002:0000575c       ??_C@_0L@OEBEGJAL@stopOrders@ 1001e75c     api.obj
- 0002:00005768       ??_C@_0L@KJCCEOIO@strategies@ 1001e768     api.obj
- 0002:00005774       ??_C@_0BB@HHAFBCFN@strategyPosition@ 1001e774     api.obj
- 0002:00005788       ??_C@_0BE@HJFFIKAM@subscribeMarketData@ 1001e788     api.obj
- 0002:0000579c       ??_C@_0N@FFCOMJFP@targetOrders@ 1001e79c     api.obj
- 0002:000057ac       ??_C@_08CDGPBNOM@tearDown@ 1001e7ac     api.obj
- 0002:000057b8       ??_C@_0BG@MOOAMIHN@unsubscribeMarketData@ 1001e7b8     api.obj
- 0002:000057d0       ??_C@_06HEJKKHEK@config@   1001e7d0     api.obj
- 0002:000057d8       ??_C@_0BA@JFNIOLAK@string?5too?5long@ 1001e7d8     api.obj
- 0002:000057e8       ??_C@_08HCOMDCCD@iojs?4exe@ 1001e7e8     win_delay_load_hook.obj
- 0002:000057f4       ??_C@_08JDDNMFDB@node?4exe@ 1001e7f4     win_delay_load_hook.obj
- 0002:00005800       ___pfnDliNotifyHook2       1001e800     win_delay_load_hook.obj
- 0002:00005808       __real@0000000000000000    1001e808     api.obj
+ 0002:00004cd8       ??_C@_0DE@OAHPJBEO@d?3?2dev?2nodeaddons?2ntdirect32?9no@ 1001dcd8     main.obj
+ 0002:00004d0c       ??_C@_0L@DODPNJFG@NTDirect32@ 1001dd0c     main.obj
+ 0002:00004d17       ??_C@_00CNPNBAHC@@         1001dd17     api.obj
+ 0002:00004d18       ??_C@_0BJ@GLEIFKFN@napi_get_last_error_info@ 1001dd18     api.obj
+ 0002:00004d34       ??_C@_0L@HGGLHLEF@Error?3?3New@ 1001dd34     api.obj
+ 0002:00004d40       ??_C@_0CC@POCGFFOK@napi_get_and_clear_last_excepti@ 1001dd40     api.obj
+ 0002:00004d64       ??_C@_0BJ@JAPLLJGC@Error?5in?5native?5callback@ 1001dd64     api.obj
+ 0002:00004d80       ??_C@_0BK@JOKHAPGN@napi_is_exception_pending@ 1001dd80     api.obj
+ 0002:00004d9c       ??_C@_0BI@LICPADOD@napi_create_string_utf8@ 1001dd9c     api.obj
+ 0002:00004db4       ??_C@_0BC@MIFMGDHH@napi_create_error@ 1001ddb4     api.obj
+ 0002:00004dc8       ??_C@_0BG@LGKKPCKG@napi_create_reference@ 1001ddc8     api.obj
+ 0002:00004de0       ??_C@_0N@JLICLJJF@Error?3?3Error@ 1001dde0     api.obj
+ 0002:00004df0       ??_C@_09IPAEKDAI@localhost@ 1001ddf0     api.obj
+ 0002:00004dfc       ??_C@_0CA@KMHKOLGC@Price?5param?5was?5not?5passed?3?3ask@ 1001ddfc     api.obj
+ 0002:00004e1c       ??_C@_0BP@PGDNKCAB@Size?5param?5was?5not?5passed?3?3ask@ 1001de1c     api.obj
+ 0002:00004e3c       ??_C@_0CG@IKMFALKC@Price?5or?5Size?5param?5can?5not?5be?5@ 1001de3c     api.obj
+ 0002:00004e64       ??_C@_0CI@NEANJFJP@Price?5param?5was?5not?5passed?3?3ask@ 1001de64     api.obj
+ 0002:00004e8c       ??_C@_0CH@DLAEOPND@Size?5param?5was?5not?5passed?3?3askP@ 1001de8c     api.obj
+ 0002:00004eb4       ??_C@_0CM@CMMBBIIF@Timestamp?5param?5was?5not?5passed?3@ 1001deb4     api.obj
+ 0002:00004ee0       ??_C@_0CO@IBGAPLL@Price?5or?5Size?5param?5can?5not?5be?5@ 1001dee0     api.obj
+ 0002:00004f10       ??_C@_0CL@IKNMFANP@OrderId?5param?5was?5not?5passed?3?3a@ 1001df10     api.obj
+ 0002:00004f3c       ??_C@_0CA@CIOGHOOF@Price?5param?5was?5not?5passed?3?3bid@ 1001df3c     api.obj
+ 0002:00004f5c       ??_C@_0BP@HCKBDHIG@Size?5param?5was?5not?5passed?3?3bid@ 1001df5c     api.obj
+ 0002:00004f7c       ??_C@_0CG@OFJJOCF@Price?5or?5Size?5param?5can?5not?5be?5@ 1001df7c     api.obj
+ 0002:00004fa4       ??_C@_0CI@BOMBIAKN@Price?5param?5was?5not?5passed?3?3bid@ 1001dfa4     api.obj
+ 0002:00004fcc       ??_C@_0CH@PBMIPKOB@Size?5param?5was?5not?5passed?3?3bidP@ 1001dfcc     api.obj
+ 0002:00004ff4       ??_C@_0CM@OGANANLH@Timestamp?5param?5was?5not?5passed?3@ 1001dff4     api.obj
+ 0002:00005020       ??_C@_0CO@MCNKBKIJ@Price?5or?5Size?5param?5can?5not?5be?5@ 1001e020     api.obj
+ 0002:00005050       ??_C@_0EM@PDFPIPFA@CommandName?5param?5was?5not?5passe@ 1001e050     api.obj
+ 0002:0000509c       ??_C@_0BA@KCPLAHGH@CANCELALLORDERS@ 1001e09c     api.obj
+ 0002:000050ac       ??_C@_0BC@NNANHPPL@FLATTENEVERYTHING@ 1001e0ac     api.obj
+ 0002:000050c0       ??_C@_0O@HKJLDOIG@CLOSESTRATEGY@ 1001e0c0     api.obj
+ 0002:000050d0       ??_C@_0DI@BMLOGBMI@Strategy?5ID?5param?5was?5not?5passe@ 1001e0d0     api.obj
+ 0002:00005108       ??_C@_0O@GJKFMMHB@CLOSEPOSITION@ 1001e108     api.obj
+ 0002:00005118       ??_C@_06JHILMIHF@CANCEL@   1001e118     api.obj
+ 0002:00005120       ??_C@_0CO@PLLHMOPP@Order?5ID?5param?5was?5not?5passed?3C@ 1001e120     api.obj
+ 0002:00005150       ??_C@_06BCPILJJG@CHANGE@   1001e150     api.obj
+ 0002:00005158       ??_C@_0CO@LALKNAC@Order?5ID?5param?5was?5not?5passed?3C@ 1001e158     api.obj
+ 0002:00005188       ??_C@_0EA@EEMDFHFL@CommandName?5param?5was?5not?5passe@ 1001e188     api.obj
+ 0002:000051c8       ??_C@_0BA@BFBDGCOJ@REVERSEPOSITION@ 1001e1c8     api.obj
+ 0002:000051d8       ??_C@_0DM@BBEBGKED@Account?5param?5was?5not?5passed?3PL@ 1001e1d8     api.obj
+ 0002:00005214       ??_C@_0DP@MGHHAGDK@Instrument?5param?5was?5not?5passed@ 1001e214     api.obj
+ 0002:00005254       ??_C@_0DL@PACONCDE@Action?5param?5was?5not?5passed?3PLA@ 1001e254     api.obj
+ 0002:00005290       ??_C@_0DI@CKJAKIFF@Qty?5param?5was?5not?5passed?3PLACE?$HM@ 1001e290     api.obj
+ 0002:000052c8       ??_C@_0DP@FFDGLBB@Order?5type?5param?5was?5not?5passed@ 1001e2c8     api.obj
+ 0002:00005308       ??_C@_0DI@NBHCOFBI@TIF?5param?5was?5not?5passed?3PLACE?$HM@ 1001e308     api.obj
+ 0002:00005340       ??_C@_0CI@EBIIEJIH@OrderId?5param?5was?5not?5passed?3?3c@ 1001e340     api.obj
+ 0002:00005368       ??_C@_0CB@PIPGGPAA@Price?5param?5was?5not?5passed?3?3las@ 1001e368     api.obj
+ 0002:0000538c       ??_C@_0CA@CMBHBIKL@Size?5param?5was?5not?5passed?3?3last@ 1001e38c     api.obj
+ 0002:000053ac       ??_C@_0CH@GDLEBCFA@Price?5or?5Size?5param?5can?5not?5be?5@ 1001e3ac     api.obj
+ 0002:000053d4       ??_C@_0CJ@JOHLEBBA@Price?5param?5was?5not?5passed?3?3las@ 1001e3d4     api.obj
+ 0002:00005400       ??_C@_0CI@OBPOEFNB@Size?5param?5was?5not?5passed?3?3last@ 1001e400     api.obj
+ 0002:00005428       ??_C@_0CN@GDOBHEOH@Timestamp?5param?5was?5not?5passed?3@ 1001e428     api.obj
+ 0002:00005458       ??_C@_0CP@KCKELOFL@Price?5or?5Size?5param?5can?5not?5be?5@ 1001e458     api.obj
+ 0002:00005488       ??_C@_0CG@BBCCGCAM@Type?5param?5was?5not?5passed?3?3mark@ 1001e488     api.obj
+ 0002:000054b0       ??_C@_05BFKKPKCG@short@    1001e4b0     api.obj
+ 0002:000054b8       ??_C@_04FMBJNPFB@flat@     1001e4b8     api.obj
+ 0002:000054c0       ??_C@_04GOKPGOLB@long@     1001e4c0     api.obj
+ 0002:000054c8       ??_C@_0CL@DCEGLPGF@Order?5Id?5param?5was?5not?5passed?3?3@ 1001e4c8     api.obj
+ 0002:000054f4       ??_C@_0CN@GGPGCMBG@Strategy?5ID?5param?5was?5not?5passe@ 1001e4f4     api.obj
+ 0002:00005524       ??_C@_0DD@MGJJJCHM@Strategy?5ID?5param?5was?5not?5passe@ 1001e524     api.obj
+ 0002:00005558       ??_C@_0CP@KMPEJCLO@Strategy?5ID?5param?5was?5not?5passe@ 1001e558     api.obj
+ 0002:00005588       ??_C@_0CE@EINHMEFD@config?5param?5was?5not?5passed?3?3co@ 1001e588     api.obj
+ 0002:000055ac       ??_C@_04OODOLJMA@host@     1001e5ac     api.obj
+ 0002:000055b4       ??_C@_04LPGMAPLE@port@     1001e5b4     api.obj
+ 0002:000055bc       ??_C@_07PMDLEBNF@account@  1001e5bc     api.obj
+ 0002:000055c4       ??_C@_0L@NFKDABHC@instrument@ 1001e5c4     api.obj
+ 0002:000055d0       ??_C@_03INJPNEOA@ask@      1001e5d0     api.obj
+ 0002:000055d4       ??_C@_0M@CBBAEOAG@askPlayback@ 1001e5d4     api.obj
+ 0002:000055e0       ??_C@_0O@LABPDHFB@avgEntryPrice@ 1001e5e0     api.obj
+ 0002:000055f0       ??_C@_0N@KCOJCHDO@avgFillPrice@ 1001e5f0     api.obj
+ 0002:00005600       ??_C@_03JADEBGH@bid@       1001e600     api.obj
+ 0002:00005604       ??_C@_0M@OLNMFLDE@bidPlayback@ 1001e604     api.obj
+ 0002:00005610       ??_C@_0M@MMLAOAI@buyingPower@ 1001e610     api.obj
+ 0002:0000561c       ??_C@_09LCPOOBBJ@cashValue@ 1001e61c     api.obj
+ 0002:00005628       ??_C@_0BA@GNKHCCDN@cancelAllOrders@ 1001e628     api.obj
+ 0002:00005638       ??_C@_0BC@GHMIGFPA@flattenEverything@ 1001e638     api.obj
+ 0002:0000564c       ??_C@_0O@CICMOGNA@closeStrategy@ 1001e64c     api.obj
+ 0002:0000565c       ??_C@_0O@DLBCBECH@closePosition@ 1001e65c     api.obj
+ 0002:0000566c       ??_C@_0M@KOCMLGIB@cancelOrder@ 1001e66c     api.obj
+ 0002:00005678       ??_C@_0M@CJIHGHA@changeOrder@ 1001e678     api.obj
+ 0002:00005684       ??_C@_0O@OKAEBBMC@placeBuyOrder@ 1001e684     api.obj
+ 0002:00005694       ??_C@_0P@DALKKMNB@placeSellOrder@ 1001e694     api.obj
+ 0002:000056a4       ??_C@_0BD@KDDGKPJP@reverseBuyPosition@ 1001e6a4     api.obj
+ 0002:000056b8       ??_C@_0BE@EJCJPJLF@reverseSellPosition@ 1001e6b8     api.obj
+ 0002:000056cc       ??_C@_0O@PBLEFIKC@confirmOrders@ 1001e6cc     api.obj
+ 0002:000056dc       ??_C@_09JGOMOAGJ@connected@ 1001e6dc     api.obj
+ 0002:000056e8       ??_C@_06MHLBHCFD@filled@   1001e6e8     api.obj
+ 0002:000056f0       ??_C@_04PLGBGIDD@last@     1001e6f0     api.obj
+ 0002:000056f8       ??_C@_0N@BHFNHHCL@lastPlayback@ 1001e6f8     api.obj
+ 0002:00005708       ??_C@_0L@CKADHFMM@marketData@ 1001e708     api.obj
+ 0002:00005714       ??_C@_0P@KBOMOIAO@marketPosition@ 1001e714     api.obj
+ 0002:00005724       ??_C@_0O@CCOHPHBP@getNewOrderId@ 1001e724     api.obj
+ 0002:00005734       ??_C@_0M@MMIGICJC@orderStatus@ 1001e734     api.obj
+ 0002:00005740       ??_C@_0M@IPBFJDGP@realizedPnL@ 1001e740     api.obj
+ 0002:0000574c       ??_C@_05DDEMHLGI@setUp@    1001e74c     api.obj
+ 0002:00005754       ??_C@_0L@OEBEGJAL@stopOrders@ 1001e754     api.obj
+ 0002:00005760       ??_C@_0L@KJCCEOIO@strategies@ 1001e760     api.obj
+ 0002:0000576c       ??_C@_0BB@HHAFBCFN@strategyPosition@ 1001e76c     api.obj
+ 0002:00005780       ??_C@_0BE@HJFFIKAM@subscribeMarketData@ 1001e780     api.obj
+ 0002:00005794       ??_C@_0N@FFCOMJFP@targetOrders@ 1001e794     api.obj
+ 0002:000057a4       ??_C@_08CDGPBNOM@tearDown@ 1001e7a4     api.obj
+ 0002:000057b0       ??_C@_0BG@MOOAMIHN@unsubscribeMarketData@ 1001e7b0     api.obj
+ 0002:000057c8       ??_C@_06HEJKKHEK@config@   1001e7c8     api.obj
+ 0002:000057d0       ??_C@_0BA@JFNIOLAK@string?5too?5long@ 1001e7d0     api.obj
+ 0002:000057e0       ??_C@_08HCOMDCCD@iojs?4exe@ 1001e7e0     win_delay_load_hook.obj
+ 0002:000057ec       ??_C@_08JDDNMFDB@node?4exe@ 1001e7ec     win_delay_load_hook.obj
+ 0002:000057f8       ___pfnDliNotifyHook2       1001e7f8     win_delay_load_hook.obj
+ 0002:00005800       __real@0000000000000000    1001e800     api.obj
  0002:00005880       ??_R4exception@std@@6B@    1001e880     libcpmt:xthrow.obj
  0002:00005894       ??_R3exception@std@@8      1001e894     libcpmt:xthrow.obj
  0002:000058a4       ??_R2exception@std@@8      1001e8a4     libcpmt:xthrow.obj
@@ -1545,31 +1545,31 @@
  0002:00005a6c       ??_R2bad_exception@std@@8  1001ea6c     libvcruntime:frame.obj
  0002:00005a78       ??_R1A@?0A@EA@bad_exception@std@@8 1001ea78     libvcruntime:frame.obj
  0002:00005aa0       ___safe_se_handler_table   1001eaa0     <linker-defined>
- 0002:00005e54       ___rtc_iaa                 1001ee54     LIBCMT:_initsect_.obj
- 0002:00005e58       ___rtc_izz                 1001ee58     LIBCMT:_initsect_.obj
- 0002:00005e5c       ___rtc_taa                 1001ee5c     LIBCMT:_initsect_.obj
- 0002:00005e60       ___rtc_tzz                 1001ee60     LIBCMT:_initsect_.obj
- 0002:00005e68       __TI2?AVbad_alloc@std@@    1001ee68     libcpmt:xthrow.obj
- 0002:00005e78       __CTA2?AVbad_alloc@std@@   1001ee78     libcpmt:xthrow.obj
- 0002:00005e84       __CT??_R0?AVbad_alloc@std@@@8??0bad_alloc@std@@QAE@ABV01@@Z12 1001ee84     libcpmt:xthrow.obj
- 0002:00005ea0       __CT??_R0?AVexception@std@@@8??0exception@std@@QAE@ABV01@@Z12 1001eea0     libcpmt:xthrow.obj
- 0002:00005ebc       __CT??_R0?AVlogic_error@std@@@8??0logic_error@std@@QAE@ABV01@@Z12 1001eebc     libcpmt:xthrow.obj
- 0002:00005ed8       __TI3?AVlength_error@std@@ 1001eed8     libcpmt:xthrow.obj
- 0002:00005ee8       __CTA3?AVlength_error@std@@ 1001eee8     libcpmt:xthrow.obj
- 0002:00005ef8       __CT??_R0?AVlength_error@std@@@8??0length_error@std@@QAE@ABV01@@Z12 1001eef8     libcpmt:xthrow.obj
- 0002:00005f74       __TI3?AVbad_array_new_length@std@@ 1001ef74     LIBCMT:throw_bad_alloc.obj
- 0002:00005f84       __CTA3?AVbad_array_new_length@std@@ 1001ef84     LIBCMT:throw_bad_alloc.obj
- 0002:00005f94       __CT??_R0?AVbad_array_new_length@std@@@8??0bad_array_new_length@std@@QAE@ABV01@@Z12 1001ef94     LIBCMT:throw_bad_alloc.obj
- 0002:000060b4       __TI2?AVbad_exception@std@@ 1001f0b4     libvcruntime:frame.obj
- 0002:000060c4       __CTA2?AVbad_exception@std@@ 1001f0c4     libvcruntime:frame.obj
- 0002:000060d0       __CT??_R0?AVbad_exception@std@@@8??0bad_exception@std@@QAE@ABV01@@Z12 1001f0d0     libvcruntime:frame.obj
- 0002:00006454       __DELAY_IMPORT_DESCRIPTOR_node_exe 1001f454     node:node.exe
- 0002:00006474       __NULL_DELAY_IMPORT_DESCRIPTOR 1001f474     node:node.exe
- 0002:00006510       \177node_NULL_THUNK_DATA_DLN 1001f510     node:node.exe
- 0002:00006808       \177node_NULL_THUNK_DATA_DLB 1001f808     node:node.exe
- 0002:000068e8       __IMPORT_DESCRIPTOR_KERNEL32 1001f8e8     kernel32:KERNEL32.dll
- 0002:000068fc       __IMPORT_DESCRIPTOR_NtDirect 1001f8fc     NtDirect:NtDirect.dll
- 0002:00006910       __NULL_IMPORT_DESCRIPTOR   1001f910     kernel32:KERNEL32.dll
+ 0002:00005e50       ___rtc_iaa                 1001ee50     LIBCMT:_initsect_.obj
+ 0002:00005e54       ___rtc_izz                 1001ee54     LIBCMT:_initsect_.obj
+ 0002:00005e58       ___rtc_taa                 1001ee58     LIBCMT:_initsect_.obj
+ 0002:00005e5c       ___rtc_tzz                 1001ee5c     LIBCMT:_initsect_.obj
+ 0002:00005e60       __TI2?AVbad_alloc@std@@    1001ee60     libcpmt:xthrow.obj
+ 0002:00005e70       __CTA2?AVbad_alloc@std@@   1001ee70     libcpmt:xthrow.obj
+ 0002:00005e7c       __CT??_R0?AVbad_alloc@std@@@8??0bad_alloc@std@@QAE@ABV01@@Z12 1001ee7c     libcpmt:xthrow.obj
+ 0002:00005e98       __CT??_R0?AVexception@std@@@8??0exception@std@@QAE@ABV01@@Z12 1001ee98     libcpmt:xthrow.obj
+ 0002:00005eb4       __CT??_R0?AVlogic_error@std@@@8??0logic_error@std@@QAE@ABV01@@Z12 1001eeb4     libcpmt:xthrow.obj
+ 0002:00005ed0       __TI3?AVlength_error@std@@ 1001eed0     libcpmt:xthrow.obj
+ 0002:00005ee0       __CTA3?AVlength_error@std@@ 1001eee0     libcpmt:xthrow.obj
+ 0002:00005ef0       __CT??_R0?AVlength_error@std@@@8??0length_error@std@@QAE@ABV01@@Z12 1001eef0     libcpmt:xthrow.obj
+ 0002:00005f6c       __TI3?AVbad_array_new_length@std@@ 1001ef6c     LIBCMT:throw_bad_alloc.obj
+ 0002:00005f7c       __CTA3?AVbad_array_new_length@std@@ 1001ef7c     LIBCMT:throw_bad_alloc.obj
+ 0002:00005f8c       __CT??_R0?AVbad_array_new_length@std@@@8??0bad_array_new_length@std@@QAE@ABV01@@Z12 1001ef8c     LIBCMT:throw_bad_alloc.obj
+ 0002:000060ac       __TI2?AVbad_exception@std@@ 1001f0ac     libvcruntime:frame.obj
+ 0002:000060bc       __CTA2?AVbad_exception@std@@ 1001f0bc     libvcruntime:frame.obj
+ 0002:000060c8       __CT??_R0?AVbad_exception@std@@@8??0bad_exception@std@@QAE@ABV01@@Z12 1001f0c8     libvcruntime:frame.obj
+ 0002:0000644c       __DELAY_IMPORT_DESCRIPTOR_node_exe 1001f44c     node:node.exe
+ 0002:0000646c       __NULL_DELAY_IMPORT_DESCRIPTOR 1001f46c     node:node.exe
+ 0002:00006508       \177node_NULL_THUNK_DATA_DLN 1001f508     node:node.exe
+ 0002:00006800       \177node_NULL_THUNK_DATA_DLB 1001f800     node:node.exe
+ 0002:000068d8       __IMPORT_DESCRIPTOR_KERNEL32 1001f8d8     kernel32:KERNEL32.dll
+ 0002:000068ec       __IMPORT_DESCRIPTOR_NtDirect 1001f8ec     NtDirect:NtDirect.dll
+ 0002:00006900       __NULL_IMPORT_DESCRIPTOR   1001f900     kernel32:KERNEL32.dll
  0003:00000000       ___security_cookie_complement 10020000     LIBCMT:gs_cookie.obj
  0003:00000004       ___security_cookie         10020004     LIBCMT:gs_cookie.obj
  0003:00000008       ___scrt_native_dllmain_reason 10020008     LIBCMT:utility.obj
@@ -2047,54 +2047,54 @@
  0002:00004208       _over                      1001d208     libucrt:fpctrl.obj
  0002:00004214       _under                     1001d214     libucrt:fpctrl.obj
  0002:00004a48       ?_names@?1??_get_fname@@9@9 1001da48     libucrt:fpexcept.obj
- 0002:00005f18       __sehtable$?dllmain_crt_process_attach@@YAHQAUHINSTANCE__@@QAX@Z 1001ef18     LIBCMT:dll_dllmain.obj
- 0002:00005f38       __sehtable$?dllmain_crt_process_detach@@YAH_N@Z 1001ef38     LIBCMT:dll_dllmain.obj
- 0002:00005f58       __sehtable$?dllmain_dispatch@@YAHQAUHINSTANCE__@@KQAX@Z 1001ef58     LIBCMT:dll_dllmain.obj
- 0002:00005fb0       __sehtable$___scrt_is_nonwritable_in_current_image 1001efb0     LIBCMT:utility.obj
- 0002:00005fd0       __sehtable$?FrameUnwindToState@__FrameHandler3@@SAXPAUEHRegistrationNode@@PAXPBU_s_FuncInfo@@H@Z 1001efd0     libvcruntime:frame.obj
- 0002:00005ff8       __sehtable$?CallCatchBlock@@YAPAXPAUEHExceptionRecord@@PAUEHRegistrationNode@@PAU_CONTEXT@@PBU_s_FuncInfo@@PAXHK@Z 1001eff8     libvcruntime:frame.obj
- 0002:00006020       __catchsym$?CallUnexpected@@YAXPBU_s_ESTypeList@@@Z$2 1001f020     libvcruntime:frame.obj
- 0002:00006030       __unwindtable$?CallUnexpected@@YAXPBU_s_ESTypeList@@@Z 1001f030     libvcruntime:frame.obj
- 0002:00006040       __tryblocktable$?CallUnexpected@@YAXPBU_s_ESTypeList@@@Z 1001f040     libvcruntime:frame.obj
- 0002:00006054       __ehfuncinfo$?CallUnexpected@@YAXPBU_s_ESTypeList@@@Z 1001f054     libvcruntime:frame.obj
- 0002:00006078       __sehtable$??$BuildCatchObjectHelperInternal@$$CBU_s_HandlerType@@@@YAHPAUEHExceptionRecord@@PAXPBU_s_HandlerType@@PBU_s_CatchableType@@@Z 1001f078     libvcruntime:frame.obj
- 0002:00006098       __sehtable$??$BuildCatchObjectInternal@$$CBU_s_HandlerType@@@@YAXPAUEHExceptionRecord@@PAXPBU_s_HandlerType@@PBU_s_CatchableType@@@Z 1001f098     libvcruntime:frame.obj
- 0002:000060f0       __sehtable$___DestructExceptionObject 1001f0f0     libvcruntime:ehhelpers.obj
- 0002:00006110       __sehtable$__query_new_handler 1001f110     libucrt:new_handler.obj
- 0002:00006130       __sehtable$??R<lambda_6e4b09c48022b2350581041d5f6b0c4c>@@QBE@XZ 1001f130     libucrt:exit.obj
- 0002:00006150       __sehtable$??$?RV<lambda_03b1d95aef87969028cfba75ccab2455>@@AAV<lambda_6e4b09c48022b2350581041d5f6b0c4c>@@V<lambda_22bdf7517842c4b3e53723af5aa32b9e>@@@?$__crt_seh_guarded_call@X@@QAEX$$QAV<lambda_03b1d95aef87969028cfba75ccab2455>@@AAV<lambda_6e4b09c48022b2350581041d5f6b0c4c>@@$$QAV<lambda_22bdf7517842c4b3e53723af5aa32b9e>@@@Z 1001f150     libucrt:exit.obj
- 0002:00006170       __sehtable$??$?RV<lambda_69a2805e680e0e292e8ba93315fe43a8>@@AAV<lambda_f03950bc5685219e0bcd2087efbe011e>@@V<lambda_03fcd07e894ec930e3f35da366ca99d6>@@@?$__crt_seh_guarded_call@H@@QAEH$$QAV<lambda_69a2805e680e0e292e8ba93315fe43a8>@@AAV<lambda_f03950bc5685219e0bcd2087efbe011e>@@$$QAV<lambda_03fcd07e894ec930e3f35da366ca99d6>@@@Z 1001f170     libucrt:onexit.obj
- 0002:00006190       __sehtable$_terminate      1001f190     libucrt:terminate.obj
- 0002:000061b0       __sehtable$??$?RV<lambda_15ade71b0218206bbe3333a0c9b79046>@@AAV<lambda_da44e0f8b0f19ba52fefafb335991732>@@V<lambda_207f2d024fc103971653565357d6cd41>@@@?$__crt_seh_guarded_call@X@@QAEX$$QAV<lambda_15ade71b0218206bbe3333a0c9b79046>@@AAV<lambda_da44e0f8b0f19ba52fefafb335991732>@@$$QAV<lambda_207f2d024fc103971653565357d6cd41>@@@Z 1001f1b0     libucrt:per_thread_data.obj
- 0002:000061d0       __sehtable$??$?RV<lambda_a7e850c220f1c8d1e6efeecdedd162c6>@@AAV<lambda_46720907175c18b6c9d2717bc0d2d362>@@V<lambda_9048902d66e8d99359bc9897bbb930a8>@@@?$__crt_seh_guarded_call@X@@QAEX$$QAV<lambda_a7e850c220f1c8d1e6efeecdedd162c6>@@AAV<lambda_46720907175c18b6c9d2717bc0d2d362>@@$$QAV<lambda_9048902d66e8d99359bc9897bbb930a8>@@@Z 1001f1d0     libucrt:per_thread_data.obj
- 0002:000061f0       __sehtable$??$?RV<lambda_38edbb1296d33220d7e4dd0ed76b244a>@@AAV<lambda_5ce1d447e08cb34b2473517608e21441>@@V<lambda_fb385d3da700c9147fc39e65dd577a8c>@@@?$__crt_seh_guarded_call@X@@QAEX$$QAV<lambda_38edbb1296d33220d7e4dd0ed76b244a>@@AAV<lambda_5ce1d447e08cb34b2473517608e21441>@@$$QAV<lambda_fb385d3da700c9147fc39e65dd577a8c>@@@Z 1001f1f0     libucrt:per_thread_data.obj
- 0002:00006210       __sehtable$??$?RV<lambda_6affb1475c98b40b75cdec977db92e3c>@@AAV<lambda_b8d4b9c228a6ecc3f80208dbb4b4a104>@@V<lambda_608742c3c92a14382c1684fc64f96c88>@@@?$__crt_seh_guarded_call@X@@QAEX$$QAV<lambda_6affb1475c98b40b75cdec977db92e3c>@@AAV<lambda_b8d4b9c228a6ecc3f80208dbb4b4a104>@@$$QAV<lambda_608742c3c92a14382c1684fc64f96c88>@@@Z 1001f210     libucrt:per_thread_data.obj
- 0002:00006230       __sehtable$??$?RV<lambda_e5124f882df8998aaf41531e079ba474>@@AAV<lambda_3e16ef9562a7dcce91392c22ab16ea36>@@V<lambda_e25ca0880e6ef98be67edffd8c599615>@@@?$__crt_seh_guarded_call@X@@QAEX$$QAV<lambda_e5124f882df8998aaf41531e079ba474>@@AAV<lambda_3e16ef9562a7dcce91392c22ab16ea36>@@$$QAV<lambda_e25ca0880e6ef98be67edffd8c599615>@@@Z 1001f230     libucrt:wsetlocale.obj
- 0002:00006250       __sehtable$?update_thread_multibyte_data_internal@@YAPAU__crt_multibyte_data@@QAU__acrt_ptd@@QAPAU1@@Z 1001f250     libucrt:mbctype.obj
- 0002:00006270       __sehtable$??$?RV<lambda_ceb1ee4838e85a9d631eb091e2fbe199>@@AAV<lambda_ae742caa10f662c28703da3d2ea5e57e>@@V<lambda_cd08b5d6af4937fe54fc07d0c9bf6b37>@@@?$__crt_seh_guarded_call@X@@QAEX$$QAV<lambda_ceb1ee4838e85a9d631eb091e2fbe199>@@AAV<lambda_ae742caa10f662c28703da3d2ea5e57e>@@$$QAV<lambda_cd08b5d6af4937fe54fc07d0c9bf6b37>@@@Z 1001f270     libucrt:mbctype.obj
- 0002:00006290       __sehtable$___acrt_initialize_lowio 1001f290     libucrt:ioinit.obj
- 0002:000062b0       __sehtable$_raise          1001f2b0     libucrt:signal.obj
- 0002:000062d0       __sehtable$??$?RV<lambda_cbab9ec6f41b0180b23cc171c22676b0>@@AAV<lambda_44731a7d0e6d81c3e6aa82d741081786>@@V<lambda_4b292cb8dd18144e164572427af410ab>@@@?$__crt_seh_guarded_call@P6AXH@Z@@QAEP6AXH@Z$$QAV<lambda_cbab9ec6f41b0180b23cc171c22676b0>@@AAV<lambda_44731a7d0e6d81c3e6aa82d741081786>@@$$QAV<lambda_4b292cb8dd18144e164572427af410ab>@@@Z 1001f2d0     libucrt:signal.obj
- 0002:000062f0       __sehtable$??$?RV<lambda_2866be3712abc81a800a822484c830d8>@@AAV<lambda_39ca0ed439415581b5b15c265174cece>@@V<lambda_2b24c74d71094a6cd0cb82e44167d71b>@@@?$__crt_seh_guarded_call@X@@QAEX$$QAV<lambda_2866be3712abc81a800a822484c830d8>@@AAV<lambda_39ca0ed439415581b5b15c265174cece>@@$$QAV<lambda_2b24c74d71094a6cd0cb82e44167d71b>@@@Z 1001f2f0     libucrt:fflush.obj
- 0002:00006310       __sehtable$??$?RV<lambda_2cc53f568c5a2bb6f192f930a45d44ea>@@AAV<lambda_ab61a845afdef5b7c387490eaf3616ee>@@V<lambda_c2ffc0b7726aa6be21d5f0026187e748>@@@?$__crt_seh_guarded_call@X@@QAEX$$QAV<lambda_2cc53f568c5a2bb6f192f930a45d44ea>@@AAV<lambda_ab61a845afdef5b7c387490eaf3616ee>@@$$QAV<lambda_c2ffc0b7726aa6be21d5f0026187e748>@@@Z 1001f310     libucrt:fflush.obj
- 0002:00006330       __sehtable$___acrt_update_thread_locale_data 1001f330     libucrt:locale_refcounting.obj
- 0002:00006350       __sehtable$___acrt_lowio_ensure_fh_exists 1001f350     libucrt:osfinfo.obj
- 0002:00006370       __sehtable$??$?RV<lambda_9e9de3de5fa147e2223d7db92bc10aa6>@@AAV<lambda_38ce7e780aa69e748d6df282ebc68efe>@@V<lambda_8ca6da459f0f6780f1cff60fdc3d00e5>@@@?$__crt_seh_guarded_call@H@@QAEH$$QAV<lambda_9e9de3de5fa147e2223d7db92bc10aa6>@@AAV<lambda_38ce7e780aa69e748d6df282ebc68efe>@@$$QAV<lambda_8ca6da459f0f6780f1cff60fdc3d00e5>@@@Z 1001f370     libucrt:commit.obj
- 0002:00006390       __sehtable$__write         1001f390     libucrt:write.obj
- 0002:000063b0       __sehtable$__fcloseall     1001f3b0     libucrt:closeall.obj
- 0002:000063cc       __unwindtable$?_wcstombs_l_helper@@YAIPADPB_WIPAU__crt_locale_pointers@@@Z 1001f3cc     libucrt:wcstombs.obj
- 0002:000063d4       __ehfuncinfo$?_wcstombs_l_helper@@YAIPADPB_WIPAU__crt_locale_pointers@@@Z 1001f3d4     libucrt:wcstombs.obj
- 0002:000063f8       __sehtable$_fclose         1001f3f8     libucrt:fclose.obj
- 0002:00006418       __sehtable$??$?RV<lambda_218ce3db14220d0be481dae8ef3383b6>@@AAV<lambda_628dfdc04ba53c8bfc02c9951375f3f5>@@V<lambda_57dc472bd5c9d5f3b2cbca59b8a843ae>@@@?$__crt_seh_guarded_call@H@@QAEH$$QAV<lambda_218ce3db14220d0be481dae8ef3383b6>@@AAV<lambda_628dfdc04ba53c8bfc02c9951375f3f5>@@$$QAV<lambda_57dc472bd5c9d5f3b2cbca59b8a843ae>@@@Z 1001f418     libucrt:close.obj
- 0002:00006438       __sehtable$__IsNonwritableInCurrentImage 1001f438     LIBCMT:pesect.obj
- 0002:00006890       .edata                     1001f890     NTDirect32.exp
- 0002:000068b8       rgpv                       1001f8b8     NTDirect32.exp
- 0002:000068bc       rgszName                   1001f8bc     NTDirect32.exp
- 0002:000068c0       rgwOrd                     1001f8c0     NTDirect32.exp
- 0002:000068c2       szName                     1001f8c2     NTDirect32.exp
- 0002:000068d2       $N00001                    1001f8d2     NTDirect32.exp
- 0002:00006ac4       .idata$6                   1001fac4     kernel32:KERNEL32.dll
- 0002:00006ad2       .idata$6                   1001fad2     NtDirect:NtDirect.dll
+ 0002:00005f10       __sehtable$?dllmain_crt_process_attach@@YAHQAUHINSTANCE__@@QAX@Z 1001ef10     LIBCMT:dll_dllmain.obj
+ 0002:00005f30       __sehtable$?dllmain_crt_process_detach@@YAH_N@Z 1001ef30     LIBCMT:dll_dllmain.obj
+ 0002:00005f50       __sehtable$?dllmain_dispatch@@YAHQAUHINSTANCE__@@KQAX@Z 1001ef50     LIBCMT:dll_dllmain.obj
+ 0002:00005fa8       __sehtable$___scrt_is_nonwritable_in_current_image 1001efa8     LIBCMT:utility.obj
+ 0002:00005fc8       __sehtable$?FrameUnwindToState@__FrameHandler3@@SAXPAUEHRegistrationNode@@PAXPBU_s_FuncInfo@@H@Z 1001efc8     libvcruntime:frame.obj
+ 0002:00005ff0       __sehtable$?CallCatchBlock@@YAPAXPAUEHExceptionRecord@@PAUEHRegistrationNode@@PAU_CONTEXT@@PBU_s_FuncInfo@@PAXHK@Z 1001eff0     libvcruntime:frame.obj
+ 0002:00006018       __catchsym$?CallUnexpected@@YAXPBU_s_ESTypeList@@@Z$2 1001f018     libvcruntime:frame.obj
+ 0002:00006028       __unwindtable$?CallUnexpected@@YAXPBU_s_ESTypeList@@@Z 1001f028     libvcruntime:frame.obj
+ 0002:00006038       __tryblocktable$?CallUnexpected@@YAXPBU_s_ESTypeList@@@Z 1001f038     libvcruntime:frame.obj
+ 0002:0000604c       __ehfuncinfo$?CallUnexpected@@YAXPBU_s_ESTypeList@@@Z 1001f04c     libvcruntime:frame.obj
+ 0002:00006070       __sehtable$??$BuildCatchObjectHelperInternal@$$CBU_s_HandlerType@@@@YAHPAUEHExceptionRecord@@PAXPBU_s_HandlerType@@PBU_s_CatchableType@@@Z 1001f070     libvcruntime:frame.obj
+ 0002:00006090       __sehtable$??$BuildCatchObjectInternal@$$CBU_s_HandlerType@@@@YAXPAUEHExceptionRecord@@PAXPBU_s_HandlerType@@PBU_s_CatchableType@@@Z 1001f090     libvcruntime:frame.obj
+ 0002:000060e8       __sehtable$___DestructExceptionObject 1001f0e8     libvcruntime:ehhelpers.obj
+ 0002:00006108       __sehtable$__query_new_handler 1001f108     libucrt:new_handler.obj
+ 0002:00006128       __sehtable$??R<lambda_6e4b09c48022b2350581041d5f6b0c4c>@@QBE@XZ 1001f128     libucrt:exit.obj
+ 0002:00006148       __sehtable$??$?RV<lambda_03b1d95aef87969028cfba75ccab2455>@@AAV<lambda_6e4b09c48022b2350581041d5f6b0c4c>@@V<lambda_22bdf7517842c4b3e53723af5aa32b9e>@@@?$__crt_seh_guarded_call@X@@QAEX$$QAV<lambda_03b1d95aef87969028cfba75ccab2455>@@AAV<lambda_6e4b09c48022b2350581041d5f6b0c4c>@@$$QAV<lambda_22bdf7517842c4b3e53723af5aa32b9e>@@@Z 1001f148     libucrt:exit.obj
+ 0002:00006168       __sehtable$??$?RV<lambda_69a2805e680e0e292e8ba93315fe43a8>@@AAV<lambda_f03950bc5685219e0bcd2087efbe011e>@@V<lambda_03fcd07e894ec930e3f35da366ca99d6>@@@?$__crt_seh_guarded_call@H@@QAEH$$QAV<lambda_69a2805e680e0e292e8ba93315fe43a8>@@AAV<lambda_f03950bc5685219e0bcd2087efbe011e>@@$$QAV<lambda_03fcd07e894ec930e3f35da366ca99d6>@@@Z 1001f168     libucrt:onexit.obj
+ 0002:00006188       __sehtable$_terminate      1001f188     libucrt:terminate.obj
+ 0002:000061a8       __sehtable$??$?RV<lambda_15ade71b0218206bbe3333a0c9b79046>@@AAV<lambda_da44e0f8b0f19ba52fefafb335991732>@@V<lambda_207f2d024fc103971653565357d6cd41>@@@?$__crt_seh_guarded_call@X@@QAEX$$QAV<lambda_15ade71b0218206bbe3333a0c9b79046>@@AAV<lambda_da44e0f8b0f19ba52fefafb335991732>@@$$QAV<lambda_207f2d024fc103971653565357d6cd41>@@@Z 1001f1a8     libucrt:per_thread_data.obj
+ 0002:000061c8       __sehtable$??$?RV<lambda_a7e850c220f1c8d1e6efeecdedd162c6>@@AAV<lambda_46720907175c18b6c9d2717bc0d2d362>@@V<lambda_9048902d66e8d99359bc9897bbb930a8>@@@?$__crt_seh_guarded_call@X@@QAEX$$QAV<lambda_a7e850c220f1c8d1e6efeecdedd162c6>@@AAV<lambda_46720907175c18b6c9d2717bc0d2d362>@@$$QAV<lambda_9048902d66e8d99359bc9897bbb930a8>@@@Z 1001f1c8     libucrt:per_thread_data.obj
+ 0002:000061e8       __sehtable$??$?RV<lambda_38edbb1296d33220d7e4dd0ed76b244a>@@AAV<lambda_5ce1d447e08cb34b2473517608e21441>@@V<lambda_fb385d3da700c9147fc39e65dd577a8c>@@@?$__crt_seh_guarded_call@X@@QAEX$$QAV<lambda_38edbb1296d33220d7e4dd0ed76b244a>@@AAV<lambda_5ce1d447e08cb34b2473517608e21441>@@$$QAV<lambda_fb385d3da700c9147fc39e65dd577a8c>@@@Z 1001f1e8     libucrt:per_thread_data.obj
+ 0002:00006208       __sehtable$??$?RV<lambda_6affb1475c98b40b75cdec977db92e3c>@@AAV<lambda_b8d4b9c228a6ecc3f80208dbb4b4a104>@@V<lambda_608742c3c92a14382c1684fc64f96c88>@@@?$__crt_seh_guarded_call@X@@QAEX$$QAV<lambda_6affb1475c98b40b75cdec977db92e3c>@@AAV<lambda_b8d4b9c228a6ecc3f80208dbb4b4a104>@@$$QAV<lambda_608742c3c92a14382c1684fc64f96c88>@@@Z 1001f208     libucrt:per_thread_data.obj
+ 0002:00006228       __sehtable$??$?RV<lambda_e5124f882df8998aaf41531e079ba474>@@AAV<lambda_3e16ef9562a7dcce91392c22ab16ea36>@@V<lambda_e25ca0880e6ef98be67edffd8c599615>@@@?$__crt_seh_guarded_call@X@@QAEX$$QAV<lambda_e5124f882df8998aaf41531e079ba474>@@AAV<lambda_3e16ef9562a7dcce91392c22ab16ea36>@@$$QAV<lambda_e25ca0880e6ef98be67edffd8c599615>@@@Z 1001f228     libucrt:wsetlocale.obj
+ 0002:00006248       __sehtable$?update_thread_multibyte_data_internal@@YAPAU__crt_multibyte_data@@QAU__acrt_ptd@@QAPAU1@@Z 1001f248     libucrt:mbctype.obj
+ 0002:00006268       __sehtable$??$?RV<lambda_ceb1ee4838e85a9d631eb091e2fbe199>@@AAV<lambda_ae742caa10f662c28703da3d2ea5e57e>@@V<lambda_cd08b5d6af4937fe54fc07d0c9bf6b37>@@@?$__crt_seh_guarded_call@X@@QAEX$$QAV<lambda_ceb1ee4838e85a9d631eb091e2fbe199>@@AAV<lambda_ae742caa10f662c28703da3d2ea5e57e>@@$$QAV<lambda_cd08b5d6af4937fe54fc07d0c9bf6b37>@@@Z 1001f268     libucrt:mbctype.obj
+ 0002:00006288       __sehtable$___acrt_initialize_lowio 1001f288     libucrt:ioinit.obj
+ 0002:000062a8       __sehtable$_raise          1001f2a8     libucrt:signal.obj
+ 0002:000062c8       __sehtable$??$?RV<lambda_cbab9ec6f41b0180b23cc171c22676b0>@@AAV<lambda_44731a7d0e6d81c3e6aa82d741081786>@@V<lambda_4b292cb8dd18144e164572427af410ab>@@@?$__crt_seh_guarded_call@P6AXH@Z@@QAEP6AXH@Z$$QAV<lambda_cbab9ec6f41b0180b23cc171c22676b0>@@AAV<lambda_44731a7d0e6d81c3e6aa82d741081786>@@$$QAV<lambda_4b292cb8dd18144e164572427af410ab>@@@Z 1001f2c8     libucrt:signal.obj
+ 0002:000062e8       __sehtable$??$?RV<lambda_2866be3712abc81a800a822484c830d8>@@AAV<lambda_39ca0ed439415581b5b15c265174cece>@@V<lambda_2b24c74d71094a6cd0cb82e44167d71b>@@@?$__crt_seh_guarded_call@X@@QAEX$$QAV<lambda_2866be3712abc81a800a822484c830d8>@@AAV<lambda_39ca0ed439415581b5b15c265174cece>@@$$QAV<lambda_2b24c74d71094a6cd0cb82e44167d71b>@@@Z 1001f2e8     libucrt:fflush.obj
+ 0002:00006308       __sehtable$??$?RV<lambda_2cc53f568c5a2bb6f192f930a45d44ea>@@AAV<lambda_ab61a845afdef5b7c387490eaf3616ee>@@V<lambda_c2ffc0b7726aa6be21d5f0026187e748>@@@?$__crt_seh_guarded_call@X@@QAEX$$QAV<lambda_2cc53f568c5a2bb6f192f930a45d44ea>@@AAV<lambda_ab61a845afdef5b7c387490eaf3616ee>@@$$QAV<lambda_c2ffc0b7726aa6be21d5f0026187e748>@@@Z 1001f308     libucrt:fflush.obj
+ 0002:00006328       __sehtable$___acrt_update_thread_locale_data 1001f328     libucrt:locale_refcounting.obj
+ 0002:00006348       __sehtable$___acrt_lowio_ensure_fh_exists 1001f348     libucrt:osfinfo.obj
+ 0002:00006368       __sehtable$??$?RV<lambda_9e9de3de5fa147e2223d7db92bc10aa6>@@AAV<lambda_38ce7e780aa69e748d6df282ebc68efe>@@V<lambda_8ca6da459f0f6780f1cff60fdc3d00e5>@@@?$__crt_seh_guarded_call@H@@QAEH$$QAV<lambda_9e9de3de5fa147e2223d7db92bc10aa6>@@AAV<lambda_38ce7e780aa69e748d6df282ebc68efe>@@$$QAV<lambda_8ca6da459f0f6780f1cff60fdc3d00e5>@@@Z 1001f368     libucrt:commit.obj
+ 0002:00006388       __sehtable$__write         1001f388     libucrt:write.obj
+ 0002:000063a8       __sehtable$__fcloseall     1001f3a8     libucrt:closeall.obj
+ 0002:000063c4       __unwindtable$?_wcstombs_l_helper@@YAIPADPB_WIPAU__crt_locale_pointers@@@Z 1001f3c4     libucrt:wcstombs.obj
+ 0002:000063cc       __ehfuncinfo$?_wcstombs_l_helper@@YAIPADPB_WIPAU__crt_locale_pointers@@@Z 1001f3cc     libucrt:wcstombs.obj
+ 0002:000063f0       __sehtable$_fclose         1001f3f0     libucrt:fclose.obj
+ 0002:00006410       __sehtable$??$?RV<lambda_218ce3db14220d0be481dae8ef3383b6>@@AAV<lambda_628dfdc04ba53c8bfc02c9951375f3f5>@@V<lambda_57dc472bd5c9d5f3b2cbca59b8a843ae>@@@?$__crt_seh_guarded_call@H@@QAEH$$QAV<lambda_218ce3db14220d0be481dae8ef3383b6>@@AAV<lambda_628dfdc04ba53c8bfc02c9951375f3f5>@@$$QAV<lambda_57dc472bd5c9d5f3b2cbca59b8a843ae>@@@Z 1001f410     libucrt:close.obj
+ 0002:00006430       __sehtable$__IsNonwritableInCurrentImage 1001f430     LIBCMT:pesect.obj
+ 0002:00006880       .edata                     1001f880     NTDirect32.exp
+ 0002:000068a8       rgpv                       1001f8a8     NTDirect32.exp
+ 0002:000068ac       rgszName                   1001f8ac     NTDirect32.exp
+ 0002:000068b0       rgwOrd                     1001f8b0     NTDirect32.exp
+ 0002:000068b2       szName                     1001f8b2     NTDirect32.exp
+ 0002:000068c2       $N00001                    1001f8c2     NTDirect32.exp
+ 0002:00006ab4       .idata$6                   1001fab4     kernel32:KERNEL32.dll
+ 0002:00006ac2       .idata$6                   1001fac2     NtDirect:NtDirect.dll
  0003:00000020       ?__vcrt_flsindex@@3KA      10020020     libvcruntime:per_thread_data.obj
  0003:00000044       ?__acrt_flsindex@@3KA      10020044     libucrt:per_thread_data.obj
  0003:00000048       ?errno_no_memory@@3HA      10020048     libucrt:errno.obj
