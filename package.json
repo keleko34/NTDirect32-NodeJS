@@ -12,7 +12,7 @@
   "binary": {
     "module_name": "ntdirect32",
     "module_path": "./build/Release",
-    "host": "https://api.github.com/keleko34/NTDirect32-NodeJS/releases/download/",
+    "host": "https://github.com/keleko34/NTDirect32-NodeJS/releases/download/",
     "package_name": "ntdirect32-{version}.tar.gz",
     "remote_path": "{version}"
   },
